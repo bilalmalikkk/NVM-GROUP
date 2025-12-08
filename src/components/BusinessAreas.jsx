@@ -47,7 +47,7 @@ export function BusinessAreas({ language = 'no' }) {
     }
   };
 
-  const t = content[language];
+  const t = content[language] || content['no']; // Fallback to Norwegian if language not found
 
   return (
     <section id="business" className="business-areas-section">
@@ -62,7 +62,7 @@ export function BusinessAreas({ language = 'no' }) {
                 <div className="business-icon-wrapper">
                   <img
                     src={iconsImage}
-                    alt=""
+                    alt={language === 'no' ? 'Forretningsområder ikoner' : 'Business areas icons'}
                     className="business-icon-img"
                     style={{
                       objectFit: 'none',
