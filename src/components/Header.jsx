@@ -104,13 +104,13 @@ export function Header({ currentPage, setCurrentPage, language, setLanguage }) {
       <nav className="primary-nav">
         <div className="primary-nav-links">
           {bottomMenuItems.map((item, index) => (
-            <a
+            <button
               key={index}
-              href={item.href}
+              onClick={() => setCurrentPage(item.label)}
               className={currentPage === item.label ? 'active' : ''}
             >
               {item.label}
-            </a>
+            </button>
           ))}
         </div>
       </nav>

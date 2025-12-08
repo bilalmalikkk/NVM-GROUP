@@ -64,23 +64,33 @@
   font-weight: 500;
 }
 
-.primary-nav-links a {
+.primary-nav-links a,
+.primary-nav-links button {
   color: #333;
   text-decoration: none;
   padding-bottom: 4px;
   transition: color 0.2s;
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
 }
 
-.primary-nav-links a:hover {
+.primary-nav-links a:hover,
+.primary-nav-links button:hover {
   color: #0066cc;
 }
 
-.primary-nav-links a.active {
+.primary-nav-links a.active,
+.primary-nav-links button.active {
   color: #0066cc;
 }
 
-.primary-nav-links a.active::after {
+.primary-nav-links a.active::after,
+.primary-nav-links button.active::after {
   content: '';
   position: absolute;
   bottom: 0;

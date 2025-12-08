@@ -8,6 +8,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState('Hjem');
   const [language, setLanguage] = useState('no');
 
+  const isHomePage = currentPage === 'Hjem' || currentPage === 'Home';
+
   return (
     <div className="App">
       <Header 
@@ -16,7 +18,11 @@ function App() {
         language={language}
         setLanguage={setLanguage}
       />
-      <HomePage language={language} />
+      {isHomePage ? (
+        <HomePage language={language} />
+      ) : (
+        <div style={{ minHeight: 'calc(100vh - 200px)' }}></div>
+      )}
       <Footer language={language} />
     </div>
   );
