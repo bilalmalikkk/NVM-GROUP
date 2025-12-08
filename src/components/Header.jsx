@@ -17,8 +17,7 @@ export function Header({ currentPage, setCurrentPage, language, setLanguage }) {
         'automotive': 'Automotive',
         'Plast & Mekanikk': 'Plastic & Mechanics',
         'Kabel konfeksjon': 'Cable assembly',
-        'Resurser': 'Resources',
-        'Ikonkatalog': 'Icon catalog'
+        'Resurser': 'Resources'
       };
       setCurrentPage(pageMap[currentPage] || 'Home');
     } else {
@@ -29,8 +28,7 @@ export function Header({ currentPage, setCurrentPage, language, setLanguage }) {
         'Automotive': 'automotive',
         'Plastic & Mechanics': 'Plast & Mekanikk',
         'Cable assembly': 'Kabel konfeksjon',
-        'Resources': 'Resurser',
-        'Icon catalog': 'Ikonkatalog'
+        'Resources': 'Resurser'
       };
       setCurrentPage(pageMap[currentPage] || 'Hjem');
     }
@@ -42,7 +40,6 @@ export function Header({ currentPage, setCurrentPage, language, setLanguage }) {
         { label: 'Våre produkter', href: '#products' },
         { label: 'Book demo', href: '#demo' },
         { label: 'Kontakt oss', href: '#contact' },
-        { label: 'Ikonkatalog', page: 'Ikonkatalog' },
         { label: 'Personvern erklæring', href: '#privacy' },
       ]
     : [
@@ -50,7 +47,6 @@ export function Header({ currentPage, setCurrentPage, language, setLanguage }) {
         { label: 'Our products', href: '#products' },
         { label: 'Book demo', href: '#demo' },
         { label: 'Contact us', href: '#contact' },
-        { label: 'Icon catalog', page: 'Icon catalog' },
         { label: 'Privacy policy', href: '#privacy' },
       ];
 
