@@ -1,0 +1,76 @@
+/* CSS Variables for consistent theming */
+
+:root {
+  /* Colors */
+  --color-primary: #0066cc;
+  --color-primary-dark: #0052a3;
+  --color-secondary: #4caf50;
+  --color-secondary-dark: #45a049;
+  --color-dark: #0f2537;
+  --color-dark-light: #1a3a5f;
+  --color-dark-lighter: #2a4a6f;
+  
+  /* Text Colors */
+  --color-text-primary: #333;
+  --color-text-secondary: #666;
+  --color-text-light: rgba(255, 255, 255, 0.9);
+  --color-text-muted: rgba(255, 255, 255, 0.8);
+  
+  /* Background Colors */
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-lighter: #fafafa;
+  --bg-gray: #f5f5f5;
+  
+  /* Border Colors */
+  --border-light: #e0e0e0;
+  --border-lighter: #e5e5e5;
+  --border-gray: #f0f0f0;
+  
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 60px;
+  --spacing-3xl: 80px;
+  
+  /* Typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 48px;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 4px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s;
+  
+  /* Z-index */
+  --z-header: 100;
+}
+

@@ -1,0 +1,200 @@
+.referencesSection {
+  background-color: white;
+  padding: 80px 80px;
+}
+
+.referencesHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.referencesTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.referencesSubtitle {
+  font-size: 18px;
+  color: #333;
+}
+
+.projectsGrid {
+  max-width: 1400px;
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.projectCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projectCardTop {
+  background: linear-gradient(180deg, #1a3a5f 0%, #0f2537 100%);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.projectIcon {
+  width: 80px;
+  height: 80px;
+  color: white;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  stroke-width: 1.5;
+}
+
+.projectCardBottom {
+  padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCategory {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0066cc;
+  margin-bottom: 12px;
+}
+
+.projectTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.projectDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.projectLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.projectLink:hover {
+  color: #0052a3;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.projectLink:hover .arrow {
+  transform: translateX(4px);
+}
+
+.viewMoreContainer {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.viewMoreBtn {
+  background-color: #1a3a5f;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.viewMoreBtn:hover {
+  background-color: #0f2537;
+  transform: translateY(-2px);
+}
+
+.viewMoreBtn:active {
+  transform: translateY(0);
+}
+
+.viewMoreBtn .arrow {
+  color: white;
+}
+
+.viewMoreBtn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .referencesSection {
+    padding: 60px 40px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .referencesSection {
+    padding: 40px 20px;
+  }
+
+  .referencesTitle {
+    font-size: 28px;
+  }
+
+  .referencesSubtitle {
+    font-size: 16px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .projectCardTop {
+    height: 160px;
+  }
+
+  .projectIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .projectCardBottom {
+    padding: 24px;
+  }
+}
+

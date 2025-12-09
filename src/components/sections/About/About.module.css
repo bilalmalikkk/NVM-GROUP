@@ -1,0 +1,88 @@
+.aboutSection {
+  background-color: white;
+  padding: 80px 80px;
+}
+
+.aboutContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutHeading {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.aboutText {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+.aboutCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.cardPlaceholder {
+  flex: 1;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 60px 40px;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 60px 40px;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+

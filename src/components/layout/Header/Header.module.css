@@ -1,0 +1,268 @@
+.header {
+  background-color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.secondaryNav {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 0;
+}
+
+.secondaryNavLinks {
+  padding: 0 80px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 13px;
+}
+
+.secondaryNavLinks a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.secondaryNavLinks a:hover {
+  color: #0066cc;
+}
+
+.languageSelector {
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 13px;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.languageSelector:hover {
+  color: #0066cc;
+}
+
+.primaryNav {
+  padding: 16px 0;
+  position: relative;
+}
+
+.primaryNavContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+}
+
+.primaryNavLinks {
+  padding: 0 80px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 8px;
+  transition: color 0.2s;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin-left: auto;
+}
+
+.mobileMenuDropdown {
+  display: none;
+}
+
+.mobileMenuItem {
+  padding: 12px 40px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+.mobileMenuItem:hover {
+  color: #0066cc;
+}
+
+.mobileMenuItem.active {
+  color: #0066cc;
+}
+
+.mobileMenuDivider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 8px 0;
+}
+
+.mobileSubmenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  padding: 8px 0;
+}
+
+.mobileSubmenuItem {
+  padding: 8px 40px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+
+.mobileSubmenuItem:hover {
+  color: #0066cc;
+}
+
+.mobileSubmenuItem.active {
+  color: #0066cc;
+  font-weight: 500;
+}
+
+.mobileSubmenuItem:last-child {
+  border-bottom: none;
+}
+
+.mobileMenuButton:hover {
+  color: #0066cc;
+}
+
+.primaryNavLinks a,
+.primaryNavLinks button {
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.primaryNavLinks a:hover,
+.primaryNavLinks button:hover {
+  color: #0066cc;
+}
+
+.primaryNavLinks a.active,
+.primaryNavLinks button.active {
+  color: #0066cc;
+}
+
+.primaryNavLinks a.active::after,
+.primaryNavLinks button.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0066cc;
+}
+
+.secondaryNavLink {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.secondaryNavLink:hover {
+  color: #0066cc;
+}
+
+.secondaryNavLink.active {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .secondaryNav {
+    display: none;
+  }
+
+  .primaryNavContainer {
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+    position: static;
+    order: 2;
+  }
+
+  .primaryNavLinks {
+    display: none;
+  }
+
+  .mobileMenuDropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .mobileMenuItem:last-of-type {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 480px) {
+  .primaryNavContainer {
+    padding: 0 20px;
+  }
+
+  .mobileMenuItem {
+    padding: 12px 20px;
+  }
+
+  .mobileSubmenuItem {
+    padding: 8px 20px;
+  }
+}
+

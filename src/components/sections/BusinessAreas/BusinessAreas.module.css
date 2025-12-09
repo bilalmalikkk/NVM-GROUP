@@ -1,0 +1,72 @@
+.businessAreasSection {
+  background-color: #f8f9fa;
+  padding: 96px 24px;
+}
+
+.businessAreasWrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.businessAreasTitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 64px;
+}
+
+.businessAreasGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.businessAreaItem {
+  text-align: center;
+}
+
+
+.businessAreaTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.businessAreaSubtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.businessAreaDescription {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .businessAreasSection {
+    padding: 60px 40px;
+  }
+
+  .businessAreasGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .businessAreasSection {
+    padding: 40px 20px;
+  }
+
+  .businessAreasTitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+}
+

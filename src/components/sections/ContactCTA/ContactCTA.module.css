@@ -1,0 +1,275 @@
+.contactSection {
+  background: linear-gradient(180deg, #2a4a6f 0%, #1a3a5f 100%);
+  padding: 80px 80px;
+  color: white;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contactMainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.contactSubtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.contactContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contactFormCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+  color: #333;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btnSend {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btnSend:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+}
+
+.btnSend:active {
+  transform: translateY(0);
+}
+
+.btnSend .btnIcon {
+  color: white;
+}
+
+.btnBook {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btnBook:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.btnBook:active {
+  transform: translateY(0);
+}
+
+.btnBook .btnIcon {
+  color: white;
+}
+
+.formSeparator {
+  text-align: center;
+  position: relative;
+  margin: 8px 0;
+}
+
+.formSeparator::before,
+.formSeparator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.formSeparator::before {
+  left: 0;
+}
+
+.formSeparator::after {
+  right: 0;
+}
+
+.formSeparator span {
+  background-color: white;
+  padding: 0 16px;
+  color: #666;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.contactInfo {
+  color: white;
+}
+
+.contactInfoHeader {
+  margin-bottom: 40px;
+}
+
+.contactInfoTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.contactDetailItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.detailIcon {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.detailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+}
+
+.contactNote {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 60px 40px;
+  }
+
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contactMainTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 40px 20px;
+  }
+
+  .contactMainTitle {
+    font-size: 28px;
+  }
+
+  .contactSubtitle {
+    font-size: 16px;
+  }
+
+  .contactFormCard {
+    padding: 32px 24px;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
+
