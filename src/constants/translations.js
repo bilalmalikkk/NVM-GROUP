@@ -29,6 +29,11 @@ export const translations = {
       button1: 'Utforsk våre løsninger',
       button2: 'Kontakt oss',
     },
+    // Project Page
+    projectPage: {
+      title: 'Prosjekter',
+      metaDescription: 'Utforsk våre prosjekter og løsninger. Fra konsept til ferdig produkt med 30 års erfaring innen elektronikkutvikling.',
+    },
     // Project Hero
     projectHero: {
       heading: 'VI GIR LIV TIL DINE IDÉER',
@@ -502,6 +507,11 @@ export const translations = {
       description: 'We develop solutions in welfare technology, mobile control systems and offer full-scale R&D design.',
       button1: 'Explore our solutions',
       button2: 'Contact us',
+    },
+    // Project Page
+    projectPage: {
+      title: 'Projects',
+      metaDescription: 'Explore our projects and solutions. From concept to finished product with 30 years of experience in electronics development.',
     },
     // Project Hero
     projectHero: {
