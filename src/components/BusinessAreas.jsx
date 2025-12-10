@@ -20,7 +20,7 @@ export function BusinessAreas({ language = 'no' }) {
         {
           iconPosition: '100%',
           title: 'Automotive styringssystemer',
-          description: 'Smart styring for bobiler og campingvogner',
+          description: 'Smart styring for bobiler og campingvogner',    
         },
       ]
     },

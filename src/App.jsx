@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { Header, Footer } from './components/layout';
-import { HomePage } from './components/pages';
+import { HomePage, ProjectPage } from './components/pages';
 import './styles/variables.css';
 import './styles/global.css';
 
@@ -9,6 +9,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('Hjem');
 
   const isHomePage = currentPage === 'Hjem' || currentPage === 'Home';
+  const isProjectPage = currentPage === 'prosjekt' || currentPage === 'project';
 
   return (
     <LanguageProvider>
@@ -19,6 +20,8 @@ function App() {
         />
         {isHomePage ? (
           <HomePage />
+        ) : isProjectPage ? (
+          <ProjectPage />
         ) : (
           <div style={{ minHeight: 'calc(100vh - 200px)' }}></div>
         )}

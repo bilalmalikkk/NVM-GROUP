@@ -4,4 +4,13 @@ export { BusinessAreas } from './BusinessAreas/BusinessAreas';
 export { WhyChooseUs } from './WhyChooseUs/WhyChooseUs';
 export { ProjectShowcase } from './ProjectShowcase/ProjectShowcase';
 export { ContactCTA } from './ContactCTA/ContactCTA';
+export { ProjectHero } from './ProjectHero/ProjectHero';
+export { ProjectContent } from './ProjectContent/ProjectContent';
+export { ProcessFlow } from './ProcessFlow/ProcessFlow';
+export { Technologies } from './Technologies/Technologies';
+export { TechnologiesDetail } from './TechnologiesDetail/TechnologiesDetail';
+export { TechnologiesAdditional } from './TechnologiesAdditional/TechnologiesAdditional';
+export { ProductionLine } from './ProductionLine/ProductionLine';
+export { ProductReferences } from './ProductReferences/ProductReferences';
+export { ProjectCTA } from './ProjectCTA/ProjectCTA';
 
