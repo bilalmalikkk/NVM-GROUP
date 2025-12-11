@@ -13,4 +13,7 @@ export { TechnologiesAdditional } from './TechnologiesAdditional/TechnologiesAdd
 export { ProductionLine } from './ProductionLine/ProductionLine';
 export { ProductReferences } from './ProductReferences/ProductReferences';
 export { ProjectCTA } from './ProjectCTA/ProjectCTA';
+export { WelfareTechnologyHero } from './WelfareTechnologyHero/WelfareTechnologyHero';
+export { WelfareTechnologySolutions } from './WelfareTechnologySolutions/WelfareTechnologySolutions';
+export { WelfareTechnologyCTA } from './WelfareTechnologyCTA/WelfareTechnologyCTA';
 

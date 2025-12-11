@@ -479,6 +479,53 @@ export const translations = {
       service4: 'Automotive systemer',
       copyright: 'Alle rettigheter reservert.',
     },
+    // Welfare Technology Hero
+    welfareTechnologyHero: {
+      heading: 'VELFERDSTEKNOLOGI',
+      description: 'Vi utvikler innovative løsninger for helse og velferd som gjør en forskjell i hverdagen. Med fokus på brukervennlighet og pålitelighet leverer vi produkter som kombinerer avansert teknologi med praktisk anvendelighet.',
+    },
+    // Welfare Technology Solutions
+    welfareTechnologySolutions: {
+      title: 'VÅRE LØSNINGER',
+      solutions: [
+        {
+          icon: 'Heart',
+          title: 'Medisinske Sensorer',
+          description: 'Presise sensorer for overvåking av vitale parametere med fokus på pålitelighet og nøyaktighet.',
+        },
+        {
+          icon: 'Wifi',
+          title: 'Trådløs Kommunikasjon',
+          description: 'Sikre og stabile IoT-løsninger som kobler enheter og systemer sammen.',
+        },
+        {
+          icon: 'Activity',
+          title: 'Sanntidsovervåking',
+          description: 'Kontinuerlig monitorering med varslingsfunksjoner for trygghet døgnet rundt.',
+        },
+        {
+          icon: 'Shield',
+          title: 'Datasikkerhet',
+          description: 'GDPR-compliant løsninger med kryptering og sikker databehandling.',
+        },
+        {
+          icon: 'Users',
+          title: 'Brukervennlig Design',
+          description: 'Intuitive grensesnitt tilpasset både brukere, pårørende og helsepersonell.',
+        },
+        {
+          icon: 'Smartphone',
+          title: 'App-integrasjon',
+          description: 'Mobile løsninger for enkel tilgang til data og styring hvor som helst.',
+        },
+      ],
+    },
+    // Welfare Technology CTA
+    welfareTechnologyCTA: {
+      title: 'INTERESSERT I VELFERDSTEKNOLOGI?',
+      description: 'Kontakt oss for å lære mer om våre løsninger innen velferdsteknologi og hvordan vi kan hjelpe med ditt neste prosjekt.',
+      buttonText: 'Kontakt oss',
+    },
   },
   en: {
     // Header
@@ -957,6 +1004,53 @@ export const translations = {
       service3: 'Welfare technology',
       service4: 'Automotive systems',
       copyright: 'All rights reserved.',
+    },
+    // Welfare Technology Hero
+    welfareTechnologyHero: {
+      heading: 'WELFARE TECHNOLOGY',
+      description: 'We develop innovative solutions for health and welfare that make a difference in everyday life. With a focus on user-friendliness and reliability, we deliver products that combine advanced technology with practical applicability.',
+    },
+    // Welfare Technology Solutions
+    welfareTechnologySolutions: {
+      title: 'OUR SOLUTIONS',
+      solutions: [
+        {
+          icon: 'Heart',
+          title: 'Medical Sensors',
+          description: 'Precise sensors for monitoring vital parameters with a focus on reliability and accuracy.',
+        },
+        {
+          icon: 'Wifi',
+          title: 'Wireless Communication',
+          description: 'Secure and stable IoT solutions that connect devices and systems together.',
+        },
+        {
+          icon: 'Activity',
+          title: 'Real-time Monitoring',
+          description: 'Continuous monitoring with alert functions for safety around the clock.',
+        },
+        {
+          icon: 'Shield',
+          title: 'Data Security',
+          description: 'GDPR-compliant solutions with encryption and secure data processing.',
+        },
+        {
+          icon: 'Users',
+          title: 'User-friendly Design',
+          description: 'Intuitive interfaces adapted for users, relatives, and healthcare personnel.',
+        },
+        {
+          icon: 'Smartphone',
+          title: 'App Integration',
+          description: 'Mobile solutions for easy data access and control anywhere.',
+        },
+      ],
+    },
+    // Welfare Technology CTA
+    welfareTechnologyCTA: {
+      title: 'INTERESTED IN WELFARE TECHNOLOGY?',
+      description: 'Contact us to learn more about our welfare technology solutions and how we can help with your next project.',
+      buttonText: 'Contact us',
     },
   },
 };

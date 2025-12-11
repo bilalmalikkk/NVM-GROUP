@@ -1,0 +1,132 @@
+.solutionsSection {
+  background-color: #f5f7fa;
+  padding: 80px 40px;
+}
+
+.solutionsWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.solutionsTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.solutionCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.solutionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.solutionIconBox {
+  width: 64px;
+  height: 64px;
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.solutionIcon {
+  width: 24px;
+  height: 24px;
+  color: #1976d2;
+  display: block;
+}
+
+.solutionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.solutionDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .solutionsSection {
+    padding: 60px 40px;
+  }
+
+  .solutionsTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .solutionCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutionsSection {
+    padding: 40px 20px;
+  }
+
+  .solutionsTitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .solutionCard {
+    padding: 24px;
+  }
+
+  .solutionIconBox {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+
+  .solutionIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
