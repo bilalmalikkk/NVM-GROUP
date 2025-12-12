@@ -1,0 +1,115 @@
+.levelSensorsSection {
+  background-color: white;
+  padding: 80px 40px;
+}
+
+.levelSensorsContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.levelSensorsImage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.levelSensorsText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.levelSensorsHeading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.levelSensorsSubheading {
+  font-size: 20px;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.levelSensorsParagraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .levelSensorsContainer {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .levelSensorsSection {
+    padding: 60px 40px;
+  }
+
+  .levelSensorsContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .levelSensorsImage {
+    order: -1;
+  }
+
+  .levelSensorsHeading {
+    font-size: 28px;
+  }
+
+  .levelSensorsSubheading {
+    font-size: 18px;
+  }
+
+  .levelSensorsParagraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .levelSensorsSection {
+    padding: 40px 20px;
+  }
+
+  .levelSensorsContainer {
+    gap: 32px;
+  }
+
+  .levelSensorsHeading {
+    font-size: 24px;
+  }
+
+  .levelSensorsSubheading {
+    font-size: 16px;
+  }
+
+  .levelSensorsParagraph {
+    font-size: 14px;
+  }
+}

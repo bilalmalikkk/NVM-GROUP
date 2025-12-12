@@ -1,0 +1,168 @@
+.partnersSection {
+  background-color: white;
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partnersContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  position: relative;
+}
+
+.partnersImage {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.partnersCard {
+  background-color: white;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-left: -60px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.partnersHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.partnersSubheading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.partnersDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+.contactLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.contactLink:hover {
+  color: #0052a3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .partnersContainer {
+    max-width: 900px;
+  }
+
+  .partnersImage {
+    height: 350px;
+  }
+
+  .partnersCard {
+    margin-left: -50px;
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnersSection {
+    padding: 60px 40px;
+  }
+
+  .partnersContainer {
+    max-width: 600px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .partnersImage {
+    height: 300px;
+    order: 1;
+  }
+
+  .partnersCard {
+    margin-left: 0;
+    margin-top: -50px;
+    order: 2;
+    padding: 35px 28px;
+  }
+
+  .partnersHeading {
+    font-size: 22px;
+  }
+
+  .partnersSubheading {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partnersSection {
+    padding: 40px 20px;
+  }
+
+  .partnersContainer {
+    max-width: 100%;
+  }
+
+  .partnersImage {
+    height: 250px;
+  }
+
+  .partnersCard {
+    margin-top: -40px;
+    padding: 28px 22px;
+  }
+
+  .partnersHeading {
+    font-size: 20px;
+  }
+
+  .partnersSubheading {
+    font-size: 14px;
+  }
+
+  .partnersDescription {
+    font-size: 14px;
+  }
+
+  .contactLink {
+    font-size: 14px;
+  }
+}

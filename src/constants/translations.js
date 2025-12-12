@@ -525,6 +525,73 @@ export const translations = {
       title: 'INTERESSERT I VELFERDSTEKNOLOGI?',
       description: 'Kontakt oss for å lære mer om våre løsninger innen velferdsteknologi og hvordan vi kan hjelpe med ditt neste prosjekt.',
       buttonText: 'Kontakt oss',
+      seeMoreText: 'Se mer',
+    },
+    // Automotive Hero
+    automotiveHero: {
+      heading: 'NORDICRVM AUTOMOTIVE',
+      description: '',
+    },
+    // Automotive Content
+    automotiveContent: {
+      heading: 'PROJECT-BASED B2B SERVICE',
+      paragraphs: [
+        'After developing industrial control systems and automotive control nodes over CAN since the early 90s, and supplementing with smart home solutions in recent years, we entered the RV and caravan industry in 2018.',
+        'We have developed a modern and scalable system ready to adapt to rapid market changes. The system handles all functions – from turning on lights and playing music, to flushing the toilet and heating the floor.',
+        'Our experience from industrial automation combined with modern IoT technology gives us a unique competitive advantage in delivering reliable and innovative solutions.',
+      ],
+      imageAlt: 'Modern RV with custom control system',
+    },
+    // Automotive Partners
+    automotivePartners: {
+      heading: 'Geografisk eksklusivitet',
+      subheading: 'B TO B BUSINESS',
+      description: 'Når vi inngår partnerskap, tilbyr vi geografisk eksklusivitet til ditt hovedmarked. Dette betyr at vi ikke vil selge våre produkter til dine direkte konkurrenter. Vi er klar over at dette begrenser antall partnere vi kan ha, men vi tror dette er den beste løsningen for å bygge sterke og langsiktige samarbeidsforhold.',
+      contactLink: 'Kontakt oss',
+      imageAlt: 'Business partnership handshake',
+    },
+    // Automotive Products Header
+    automotiveProductsHeader: {
+      heading: 'PRODUKTENE VÅRE',
+      subheading: 'En smarthjemløsning for campingvogner og bobiler.',
+    },
+    // Automotive Main Controller
+    automotiveMainController: {
+      heading: 'HOVEDKONTROLLER',
+      subheading: 'Kontrollsentralen',
+      paragraphs: [
+        'Hovedkontrolleren håndterer alle funksjoner som oppvarming, dimming av lys, musikkavspilling, nivellering, vannivå og mer. Kort sagt, all kontroll og innstillinger gjøres fra den 7-tommers berøringsskjermen.',
+        'Alle funksjoner er også tilgjengelige på din mobile enhet via skyen, noe som gjør det mulig å fjernstyre systemet.',
+        'Fra tid til annen lanserer vi ny programvare med flere funksjoner. Dette installeres automatisk fra skyen.',
+      ],
+      imageAlt: 'Main controller interface and hardware',
+    },
+    // Automotive IO Nodes
+    automotiveIONodes: {
+      heading: 'IO NODER',
+      subheading: 'Distribuerte kontrollenheter',
+      description: 'Flere IO-noder kan distribueres inne i kjøretøyet for å redusere kabelinstallasjon. IO-noden har en konfigurasjon optimalisert for campingvogner og bobiler.',
+      features: [
+        'Alle utgangsporter kan reguleres fra 0 til 100%, og leverer 7 Amp',
+        'Seriell nivåsensor for vanntanker',
+        'CAN-porter',
+        'Digitale innganger',
+        'LIN-porter',
+        'PIR-sensor',
+        'og mer',
+      ],
+      imageAlt: 'CAN IO Module Model SIO2x',
+    },
+    // Automotive Level Sensors
+    automotiveLevelSensors: {
+      heading: 'NIVÅSENSORER',
+      subheading: 'Vann- og avfallstanker',
+      paragraphs: [
+        'Denne sensoren monteres fra toppen for å redusere risiko for lekkasje og forenkle installasjonen. Bare bor et 20 mm hull på toppen av tanken og installer sensoren.',
+        'Analog eller seriell utgang gir indikasjon av tanknivå fra 0-100%.',
+        'Sensoren kan enkelt justeres til enhver tankstørrelse.',
+      ],
+      imageAlt: 'Level sensor for water and waste tanks',
     },
   },
   en: {
@@ -1051,6 +1118,73 @@ export const translations = {
       title: 'INTERESTED IN WELFARE TECHNOLOGY?',
       description: 'Contact us to learn more about our welfare technology solutions and how we can help with your next project.',
       buttonText: 'Contact us',
+      seeMoreText: 'See more',
+    },
+    // Automotive Hero
+    automotiveHero: {
+      heading: 'NORDICRVM AUTOMOTIVE',
+      description: '',
+    },
+    // Automotive Content
+    automotiveContent: {
+      heading: 'PROJECT-BASED B2B SERVICE',
+      paragraphs: [
+        'After developing industrial control systems and automotive control nodes over CAN since the early 90s, and supplementing with smart home solutions in recent years, we entered the RV and caravan industry in 2018.',
+        'We have developed a modern and scalable system ready to adapt to rapid market changes. The system handles all functions – from turning on lights and playing music, to flushing the toilet and heating the floor.',
+        'Our experience from industrial automation combined with modern IoT technology gives us a unique competitive advantage in delivering reliable and innovative solutions.',
+      ],
+      imageAlt: 'Modern RV with custom control system',
+    },
+    // Automotive Partners
+    automotivePartners: {
+      heading: 'Geographical exclusivity',
+      subheading: 'B TO B BUSINESS',
+      description: 'When we enter into partnerships, we offer geographical exclusivity to your main market. This means that we will not sell our products to your direct competitors. We are aware that this limits the number of partners we can have, but we believe this is the best solution for building strong and long-term collaborative relationships.',
+      contactLink: 'Contact us',
+      imageAlt: 'Business partnership handshake',
+    },
+    // Automotive Products Header
+    automotiveProductsHeader: {
+      heading: 'OUR PRODUCTS',
+      subheading: 'A smart home solution for caravans and motorhomes.',
+    },
+    // Automotive Main Controller
+    automotiveMainController: {
+      heading: 'MAIN CONTROLLER',
+      subheading: 'Control Central',
+      paragraphs: [
+        'The main controller handles all functions such as heating, light dimming, music playback, leveling, water level and more. In short, all control and settings are done from the 7-inch touchscreen.',
+        'All functions are also available on your mobile device via the cloud, which makes it possible to remotely control the system.',
+        'From time to time we release new software with more functions. This is installed automatically from the cloud.',
+      ],
+      imageAlt: 'Main controller interface and hardware',
+    },
+    // Automotive IO Nodes
+    automotiveIONodes: {
+      heading: 'IO NODES',
+      subheading: 'Distributed control units',
+      description: 'Multiple IO-nodes can be distributed inside the vehicle to reduce cable installation. The IO-node has a configuration optimized for caravans and motorhomes.',
+      features: [
+        'All output ports can be regulated from 0 to 100%, and deliver 7 Amp',
+        'Serial level sensor for water tanks',
+        'CAN-ports',
+        'Digital inputs',
+        'LIN-ports',
+        'PIR-sensor',
+        'and more',
+      ],
+      imageAlt: 'CAN IO Module Model SIO2x',
+    },
+    // Automotive Level Sensors
+    automotiveLevelSensors: {
+      heading: 'LEVEL SENSORS',
+      subheading: 'Water and waste tanks',
+      paragraphs: [
+        'This sensor is mounted from the top to reduce the risk of leakage and simplify installation. Just drill a 20 mm hole on top of the tank and install the sensor.',
+        'Analog or serial output provides tank level indication from 0-100%.',
+        'The sensor can be easily adjusted to any tank size.',
+      ],
+      imageAlt: 'Level sensor for water and waste tanks',
     },
   },
 };

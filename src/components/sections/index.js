@@ -16,4 +16,11 @@ export { ProjectCTA } from './ProjectCTA/ProjectCTA';
 export { WelfareTechnologyHero } from './WelfareTechnologyHero/WelfareTechnologyHero';
 export { WelfareTechnologySolutions } from './WelfareTechnologySolutions/WelfareTechnologySolutions';
 export { WelfareTechnologyCTA } from './WelfareTechnologyCTA/WelfareTechnologyCTA';
+export { AutomotiveHero } from './AutomotiveHero/AutomotiveHero';
+export { AutomotiveContent } from './AutomotiveContent/AutomotiveContent';
+export { AutomotivePartners } from './AutomotivePartners/AutomotivePartners';
+export { AutomotiveProductsHeader } from './AutomotiveProductsHeader/AutomotiveProductsHeader';
+export { AutomotiveMainController } from './AutomotiveMainController/AutomotiveMainController';
+export { AutomotiveIONodes } from './AutomotiveIONodes/AutomotiveIONodes';
+export { AutomotiveLevelSensors } from './AutomotiveLevelSensors/AutomotiveLevelSensors';
 

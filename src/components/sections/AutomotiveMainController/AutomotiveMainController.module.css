@@ -1,0 +1,116 @@
+.mainControllerSection {
+  background-color: white;
+  padding: 80px 40px;
+}
+
+.mainControllerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mainControllerImage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.mainControllerText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainControllerHeading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mainControllerSubheading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  margin-top: -8px;
+}
+
+.mainControllerParagraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mainControllerContainer {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainControllerSection {
+    padding: 60px 40px;
+  }
+
+  .mainControllerContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mainControllerImage {
+    order: 1;
+  }
+
+  .mainControllerText {
+    order: 2;
+  }
+
+  .mainControllerHeading {
+    font-size: 28px;
+  }
+
+  .mainControllerSubheading {
+    font-size: 20px;
+  }
+
+  .mainControllerParagraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainControllerSection {
+    padding: 40px 20px;
+  }
+
+  .mainControllerContainer {
+    gap: 32px;
+  }
+
+  .mainControllerHeading {
+    font-size: 24px;
+  }
+
+  .mainControllerSubheading {
+    font-size: 18px;
+  }
+
+  .mainControllerParagraph {
+    font-size: 14px;
+  }
+}

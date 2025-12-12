@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Wifi, Activity, Shield, Users, Smartphone } from 'lucide-react';
+import { Heart, Wifi, Activity, Shield, Users, Smartphone, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
 import styles from './WelfareTechnologySolutions.module.css';
@@ -38,6 +38,17 @@ export function WelfareTechnologySolutions() {
               </div>
             );
           })}
+        </div>
+        <div className={styles.seeMoreContainer}>
+          <a 
+            href="https://www.nordicmedtek.no/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.seeMoreButton}
+          >
+            <span>{t.welfareTechnologyCTA.seeMoreText}</span>
+            <ArrowRight size={18} className={styles.arrowIcon} />
+          </a>
         </div>
       </div>
     </section>
