@@ -23,4 +23,7 @@ export { AutomotiveProductsHeader } from './AutomotiveProductsHeader/AutomotiveP
 export { AutomotiveMainController } from './AutomotiveMainController/AutomotiveMainController';
 export { AutomotiveIONodes } from './AutomotiveIONodes/AutomotiveIONodes';
 export { AutomotiveLevelSensors } from './AutomotiveLevelSensors/AutomotiveLevelSensors';
+export { AutomotiveAccessories } from './AutomotiveAccessories/AutomotiveAccessories';
+export { AutomotiveMobileControl } from './AutomotiveMobileControl/AutomotiveMobileControl';
+export { AutomotiveRemoteService } from './AutomotiveRemoteService/AutomotiveRemoteService';
 

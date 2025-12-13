@@ -1,9 +1,9 @@
-.ioNodesSection {
+.remoteServiceSection {
   background-color: white;
   padding: 80px 40px;
 }
 
-.ioNodesContainer {
+.remoteServiceContainer {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
@@ -12,13 +12,13 @@
   align-items: center;
 }
 
-.ioNodesText {
+.remoteServiceText {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.ioNodesHeading {
+.remoteServiceHeading {
   font-size: 36px;
   font-weight: 700;
   color: #1e293b;
@@ -28,7 +28,7 @@
   margin-bottom: 8px;
 }
 
-.ioNodesSubheading {
+.remoteServiceSubheading {
   font-size: 20px;
   font-weight: 500;
   color: #64748b;
@@ -37,15 +37,14 @@
   margin-bottom: 8px;
 }
 
-.ioNodesParagraph {
+.remoteServiceParagraph {
   font-size: 16px;
   line-height: 1.8;
   color: #334155;
   margin: 0;
-  margin-bottom: 8px;
 }
 
-.ioNodesList {
+.remoteServiceList {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -54,7 +53,7 @@
   gap: 12px;
 }
 
-.ioNodesListItem {
+.remoteServiceListItem {
   font-size: 16px;
   line-height: 1.8;
   color: #334155;
@@ -62,7 +61,7 @@
   position: relative;
 }
 
-.ioNodesListItem::before {
+.remoteServiceListItem::before {
   content: '•';
   position: absolute;
   left: 0;
@@ -71,9 +70,8 @@
   font-size: 20px;
 }
 
-.ioNodesImage {
+.remoteServiceImage {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +79,7 @@
 
 .image {
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   height: auto;
   border-radius: 12px;
   object-fit: contain;
@@ -89,58 +87,58 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .ioNodesContainer {
+  .remoteServiceContainer {
     gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .ioNodesSection {
+  .remoteServiceSection {
     padding: 60px 40px;
   }
 
-  .ioNodesContainer {
+  .remoteServiceContainer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .ioNodesImage {
+  .remoteServiceImage {
     order: -1;
   }
 
-  .ioNodesHeading {
+  .remoteServiceHeading {
     font-size: 28px;
   }
 
-  .ioNodesSubheading {
+  .remoteServiceSubheading {
     font-size: 18px;
   }
 
-  .ioNodesParagraph,
-  .ioNodesListItem {
+  .remoteServiceParagraph,
+  .remoteServiceListItem {
     font-size: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .ioNodesSection {
+  .remoteServiceSection {
     padding: 40px 20px;
   }
 
-  .ioNodesContainer {
+  .remoteServiceContainer {
     gap: 32px;
   }
 
-  .ioNodesHeading {
+  .remoteServiceHeading {
     font-size: 24px;
   }
 
-  .ioNodesSubheading {
+  .remoteServiceSubheading {
     font-size: 16px;
   }
 
-  .ioNodesParagraph,
-  .ioNodesListItem {
+  .remoteServiceParagraph,
+  .remoteServiceListItem {
     font-size: 14px;
   }
 }

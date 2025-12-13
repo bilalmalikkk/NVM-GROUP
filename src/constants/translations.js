@@ -593,6 +593,72 @@ export const translations = {
       ],
       imageAlt: 'Level sensor for water and waste tanks',
     },
+    // Automotive Accessories
+    automotiveAccessories: {
+      heading: 'TILLEGGSUTSTYR & KOMPONENTER',
+      intro: 'Alt du trenger for en komplett elektrisk installasjon',
+      description: 'For å sikre en optimal og pålitelig installasjon, tilbyr vi et komplett sortiment av tilleggsutstyr og komponenter:',
+      components: [
+        {
+          name: 'Temperatursensorer',
+          description: 'Presis overvåking av temperatur i ulike soner',
+        },
+        {
+          name: 'Kabelproduksjon',
+          description: 'Skreddersydde kabelløsninger tilpasset ditt kjøretøy',
+        },
+        {
+          name: 'Antenner',
+          description: 'For sikker og stabil kommunikasjon med skyen',
+        },
+        {
+          name: 'Kontakter og tilkoblinger',
+          description: 'Robust utstyr for pålitelig drift',
+        },
+        {
+          name: 'Montasjeutstyr',
+          description: 'Alt nødvendig for profesjonell installasjon',
+        },
+      ],
+      conclusion: 'Vi leverer komplette løsninger som sikrer at alle komponenter fungerer sømløst sammen.',
+      imageAlt: 'Electrical accessories and components for vehicle installation',
+    },
+    // Automotive Mobile Control
+    automotiveMobileControl: {
+      heading: 'FULL KONTROLL FRA MOBILEN',
+      subheading: 'Styr campingvognen fra hvor som helst',
+      paragraphs: [
+        'Med vår mobilapp har du full kontroll over campingvognen din, uansett hvor du befinner deg. Alle funksjoner som er tilgjengelige på hovedkontrolleren, er også tilgjengelige i appen.',
+        'Skru på oppvarmingen før du ankommer, sjekk vannivået, kontroller om lyset er slått av, eller juster temperaturen - alt fra mobilen din. Applikasjonens skybaserte arkitektur sikrer at du alltid har kontroll, selv når du ikke er i nærheten av kjøretøyet.',
+        'Systemet varsler deg også automatisk om viktige hendelser, som lavt batteri, full avfallstank eller temperaturer utenfor normalområdet.',
+      ],
+      features: [
+        'Tilgjengelig for iOS og Android',
+        'Sanntidsoppdateringer fra kjøretøyet',
+        'Automatiske varsler og notifikasjoner',
+        'Brukervennlig og intuitiv design',
+        'Sikker sky-tilkobling',
+      ],
+      imageAlt: 'Mobile app for controlling camping trailer from smartphone',
+    },
+    // Automotive Remote Service
+    automotiveRemoteService: {
+      heading: 'WEBBASERT REMOTE SERVICE',
+      subheading: 'Ekspertdiagnostikk fra skyen',
+      paragraphs: [
+        'Med vår webbaserte serviceplattform kan våre eksperter utføre komplett feilsøking og diagnose av campingvognen din, uansett hvor den befinner seg. Når eieren aktiverer \'Remote Service\', får våre spesialiserte teknikere full tilgang til å teste og verifisere alle systemfunksjoner.',
+        'Dette revolusjonerer servicebransjen ved at personer med dyp systemkunnskap kan utføre like grundige kontroller eksternt som om de var fysisk til stede. Resultatet er raskere problemløsning, færre feildiagnoser og betydelig reduserte servicekostnader.',
+        'I mange tilfeller kan problemer løses uten at kjøretøyet trenger å besøke verksted. Når verkstedbesøk er nødvendig, er diagnosen allerede satt, og riktig deler og kompetanse er klar.',
+      ],
+      features: [
+        'Eliminerer unødvendige verkstedbesøk',
+        'Reduserer servicetid med opptil 70%',
+        'Sparer kostnader for både forhandler og kunde',
+        'Ekspertstøtte uavhengig av geografisk beliggenhet',
+        'Sikker og autorisert tilgang via skyplattform',
+      ],
+      imageAlt: 'Web-based remote service platform for expert diagnostics',
+    },
   },
   en: {
     // Header
@@ -1185,6 +1251,72 @@ export const translations = {
         'The sensor can be easily adjusted to any tank size.',
       ],
       imageAlt: 'Level sensor for water and waste tanks',
+    },
+    // Automotive Accessories
+    automotiveAccessories: {
+      heading: 'ACCESSORIES & COMPONENTS',
+      intro: 'Everything you need for a complete electrical installation',
+      description: 'To ensure an optimal and reliable installation, we offer a complete assortment of accessories and components:',
+      components: [
+        {
+          name: 'Temperature sensors',
+          description: 'Precise monitoring of temperature in various zones',
+        },
+        {
+          name: 'Cable production',
+          description: 'Custom cable solutions adapted to your vehicle',
+        },
+        {
+          name: 'Antennas',
+          description: 'For secure and stable communication with the cloud',
+        },
+        {
+          name: 'Contacts and connections',
+          description: 'Robust equipment for reliable operation',
+        },
+        {
+          name: 'Mounting equipment',
+          description: 'Everything necessary for professional installation',
+        },
+      ],
+      conclusion: 'We deliver complete solutions that ensure all components work seamlessly together.',
+      imageAlt: 'Electrical accessories and components for vehicle installation',
+    },
+    // Automotive Mobile Control
+    automotiveMobileControl: {
+      heading: 'FULL CONTROL FROM THE MOBILE',
+      subheading: 'Control your camping trailer from anywhere',
+      paragraphs: [
+        'With our mobile app, you have full control over your camping trailer, no matter where you are. All functions available on the main controller are also available in the app.',
+        'Turn on the heating before you arrive, check the water level, control if the light is off, or adjust the temperature - all from your mobile. The application\'s cloud-based architecture ensures you always have control, even when you are not near the vehicle.',
+        'The system also automatically alerts you about important events, such as low battery, full waste tank, or temperatures outside the normal range.',
+      ],
+      features: [
+        'Available for iOS and Android',
+        'Real-time updates from the vehicle',
+        'Automatic alerts and notifications',
+        'User-friendly and intuitive design',
+        'Secure cloud connection',
+      ],
+      imageAlt: 'Mobile app for controlling camping trailer from smartphone',
+    },
+    // Automotive Remote Service
+    automotiveRemoteService: {
+      heading: 'WEB-BASED REMOTE SERVICE',
+      subheading: 'Expert diagnostics from the cloud',
+      paragraphs: [
+        'With our web-based service platform, our experts can perform complete troubleshooting and diagnostics of your camping trailer, regardless of where it is located. When the owner activates \'Remote Service\', our specialized technicians get full access to test and verify all system functions.',
+        'This revolutionizes the service industry by allowing people with deep system knowledge to perform equally thorough checks remotely as if they were physically present. The result is faster problem solving, fewer misdiagnoses, and significantly reduced service costs.',
+        'In many cases, problems can be solved without the vehicle needing to visit a workshop. When a workshop visit is necessary, the diagnosis is already set, and the right parts and expertise are ready.',
+      ],
+      features: [
+        'Eliminates unnecessary workshop visits',
+        'Reduces service time by up to 70%',
+        'Saves costs for both dealer and customer',
+        'Expert support regardless of geographical location',
+        'Secure and authorized access via cloud platform',
+      ],
+      imageAlt: 'Web-based remote service platform for expert diagnostics',
     },
   },
 };

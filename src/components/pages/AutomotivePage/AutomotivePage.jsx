@@ -6,6 +6,9 @@ import { AutomotiveProductsHeader } from '../../sections/AutomotiveProductsHeade
 import { AutomotiveMainController } from '../../sections/AutomotiveMainController/AutomotiveMainController';
 import { AutomotiveIONodes } from '../../sections/AutomotiveIONodes/AutomotiveIONodes';
 import { AutomotiveLevelSensors } from '../../sections/AutomotiveLevelSensors/AutomotiveLevelSensors';
+import { AutomotiveAccessories } from '../../sections/AutomotiveAccessories/AutomotiveAccessories';
+import { AutomotiveMobileControl } from '../../sections/AutomotiveMobileControl/AutomotiveMobileControl';
+import { AutomotiveRemoteService } from '../../sections/AutomotiveRemoteService/AutomotiveRemoteService';
 
 export function AutomotivePage() {
   return (
@@ -17,6 +20,9 @@ export function AutomotivePage() {
       <AutomotiveMainController />
       <AutomotiveIONodes />
       <AutomotiveLevelSensors />
+      <AutomotiveAccessories />
+      <AutomotiveMobileControl />
+      <AutomotiveRemoteService />
     </div>
   );
 }

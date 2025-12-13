@@ -1,9 +1,9 @@
-.ioNodesSection {
+.accessoriesSection {
   background-color: white;
   padding: 80px 40px;
 }
 
-.ioNodesContainer {
+.accessoriesContainer {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
@@ -12,13 +12,13 @@
   align-items: center;
 }
 
-.ioNodesText {
+.accessoriesText {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.ioNodesHeading {
+.accessoriesHeading {
   font-size: 36px;
   font-weight: 700;
   color: #1e293b;
@@ -28,24 +28,22 @@
   margin-bottom: 8px;
 }
 
-.ioNodesSubheading {
-  font-size: 20px;
+.accessoriesIntro {
+  font-size: 18px;
   font-weight: 500;
-  color: #64748b;
+  color: #334155;
   margin: 0;
-  margin-top: -8px;
-  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
-.ioNodesParagraph {
+.accessoriesDescription {
   font-size: 16px;
   line-height: 1.8;
   color: #334155;
   margin: 0;
-  margin-bottom: 8px;
 }
 
-.ioNodesList {
+.accessoriesList {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -54,26 +52,28 @@
   gap: 12px;
 }
 
-.ioNodesListItem {
+.accessoriesListItem {
   font-size: 16px;
   line-height: 1.8;
   color: #334155;
-  padding-left: 24px;
-  position: relative;
+  margin: 0;
 }
 
-.ioNodesListItem::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #0066cc;
-  font-weight: bold;
-  font-size: 20px;
+.accessoriesListItem strong {
+  color: #1e293b;
+  font-weight: 600;
 }
 
-.ioNodesImage {
+.accessoriesConclusion {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.accessoriesImage {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +81,6 @@
 
 .image {
   width: 100%;
-  max-width: 400px;
   height: auto;
   border-radius: 12px;
   object-fit: contain;
@@ -89,58 +88,60 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .ioNodesContainer {
+  .accessoriesContainer {
     gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .ioNodesSection {
+  .accessoriesSection {
     padding: 60px 40px;
   }
 
-  .ioNodesContainer {
+  .accessoriesContainer {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .ioNodesImage {
+  .accessoriesImage {
     order: -1;
   }
 
-  .ioNodesHeading {
+  .accessoriesHeading {
     font-size: 28px;
   }
 
-  .ioNodesSubheading {
-    font-size: 18px;
+  .accessoriesIntro {
+    font-size: 16px;
   }
 
-  .ioNodesParagraph,
-  .ioNodesListItem {
+  .accessoriesDescription,
+  .accessoriesListItem,
+  .accessoriesConclusion {
     font-size: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .ioNodesSection {
+  .accessoriesSection {
     padding: 40px 20px;
   }
 
-  .ioNodesContainer {
+  .accessoriesContainer {
     gap: 32px;
   }
 
-  .ioNodesHeading {
+  .accessoriesHeading {
     font-size: 24px;
   }
 
-  .ioNodesSubheading {
-    font-size: 16px;
+  .accessoriesIntro {
+    font-size: 15px;
   }
 
-  .ioNodesParagraph,
-  .ioNodesListItem {
+  .accessoriesDescription,
+  .accessoriesListItem,
+  .accessoriesConclusion {
     font-size: 14px;
   }
 }
