@@ -1,0 +1,190 @@
+.deliverySection {
+  background-color: white;
+  padding: 80px 40px;
+}
+
+.deliveryWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.deliveryHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.deliveryTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.deliverySubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deliveryContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.deliveryImage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.deliveryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contentHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.deliveryCard {
+  background-color: #e0f2fe;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.deliveryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  text-transform: none;
+}
+
+.cardDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .deliveryContainer {
+    gap: 40px;
+  }
+
+  .deliveryTitle {
+    font-size: 32px;
+  }
+
+  .contentHeading {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .deliverySection {
+    padding: 60px 40px;
+  }
+
+  .deliveryHeader {
+    margin-bottom: 40px;
+  }
+
+  .deliveryTitle {
+    font-size: 28px;
+  }
+
+  .deliverySubtitle {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contentHeading {
+    font-size: 22px;
+  }
+
+  .deliveryImage {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .deliverySection {
+    padding: 40px 20px;
+  }
+
+  .deliveryHeader {
+    margin-bottom: 32px;
+  }
+
+  .deliveryTitle {
+    font-size: 24px;
+  }
+
+  .deliverySubtitle {
+    font-size: 15px;
+  }
+
+  .deliveryContainer {
+    gap: 32px;
+  }
+
+  .contentHeading {
+    font-size: 20px;
+  }
+
+  .deliveryCard {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+}
+

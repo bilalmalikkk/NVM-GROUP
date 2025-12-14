@@ -26,4 +26,9 @@ export { AutomotiveLevelSensors } from './AutomotiveLevelSensors/AutomotiveLevel
 export { AutomotiveAccessories } from './AutomotiveAccessories/AutomotiveAccessories';
 export { AutomotiveMobileControl } from './AutomotiveMobileControl/AutomotiveMobileControl';
 export { AutomotiveRemoteService } from './AutomotiveRemoteService/AutomotiveRemoteService';
+export { PlasticMechanicsHero } from './PlasticMechanicsHero/PlasticMechanicsHero';
+export { PlasticMechanicsContent } from './PlasticMechanicsContent/PlasticMechanicsContent';
+export { PlasticMechanicsCollaboration } from './PlasticMechanicsCollaboration/PlasticMechanicsCollaboration';
+export { PlasticMechanicsDelivery } from './PlasticMechanicsDelivery/PlasticMechanicsDelivery';
+export { PlasticMechanicsCTA } from './PlasticMechanicsCTA/PlasticMechanicsCTA';
 

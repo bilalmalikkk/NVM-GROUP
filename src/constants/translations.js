@@ -527,6 +527,61 @@ export const translations = {
       buttonText: 'Kontakt oss',
       seeMoreText: 'Se mer',
     },
+    // Plastic Mechanics Hero
+    plasticMechanicsHero: {
+      heading: 'Plastdesign og mekanisk konstruksjon',
+      description: 'Vi er en komplett leverandør som designer mekanikk og plastdeler parallelt med elektronikkutvikling – og sikrer optimale løsninger fra starten.',
+    },
+    // Plastic Mechanics Content
+    plasticMechanicsContent: {
+      heading: 'Unik ekspertise i helhetlig produktutvikling',
+      paragraph1: 'Med 30 års erfaring designer vi optimale og produksjonsklare løsninger. Vår unike ekspertise ligger i å forstå samspillet mellom plastdeler, mekanikk og elektronikk fra prosjektets aller første start.',
+      paragraph2: 'Denne erfaringen sikrer at produktet til slutt kan monteres så effektivt som mulig – og sparer tid og kostnader i produksjonsfasen.',
+      features: [
+        'Parallell utvikling: Mekanikk og plastdeler designes samtidig med elektronikkutvikling',
+        'Produksjonsbarhet i fokus: 30 års erfaring sikrer at løsningene er optimale for produksjon',
+        'Effektiv montering: Designet fra starten for optimal montering og produksjon',
+      ],
+      imageAlt: 'Mekaniske komponenter og deler',
+    },
+    // Plastic Mechanics Collaboration
+    plasticMechanicsCollaboration: {
+      heading: 'Samarbeid med designbyråer',
+      paragraph1: 'I prosjekter med høye krav til design og visuelt uttrykk samarbeider vi med flere utmerkede designbyråer som bidrar til å skape det estetiske uttrykket.',
+      paragraph2: 'Men det er fortsatt vi som sikrer at designet – med plastdeler, mekanikk og elektronikk – blir optimalt utført. Vi sikrer at vakre design også blir produksjonsklare og kostnadseffektive løsninger.',
+      imageAlt: 'Samarbeid med designbyråer',
+    },
+    // Plastic Mechanics Delivery
+    plasticMechanicsDelivery: {
+      title: 'Fra design til ferdig produkt',
+      subtitle: 'Vi leverer hele verdikjeden – fra idé til ferdig plastprodukt i alle størrelser',
+      contentHeading: 'Vår komplette leveranse',
+      cards: [
+        {
+          title: 'Design og konstruksjon',
+          description: 'Vi designer plastdeler og mekanikk optimalisert for produksjon og montering',
+        },
+        {
+          title: 'Plaststøpeformer og verktøy',
+          description: 'Vi lager høykvalitets plaststøpeformer for kostnadseffektiv produksjon',
+        },
+        {
+          title: 'Prototyper',
+          description: 'Raske prototyper for testing og validering før produksjon',
+        },
+        {
+          title: 'Produksjon i alle størrelser',
+          description: 'Fra småserier til volumproduksjon – vi leverer i den skalaen du trenger',
+        },
+      ],
+      imageAlt: 'Produksjonsprosess',
+    },
+    // Plastic Mechanics CTA
+    plasticMechanicsCTA: {
+      title: 'Klar til å realisere din produktidé?',
+      description: 'Kontakt oss for en uforpliktende samtale om ditt prosjekt',
+      buttonText: 'Kontakt oss',
+    },
     // Automotive Hero
     automotiveHero: {
       heading: 'NORDICRVM AUTOMOTIVE',
@@ -1185,6 +1240,61 @@ export const translations = {
       description: 'Contact us to learn more about our welfare technology solutions and how we can help with your next project.',
       buttonText: 'Contact us',
       seeMoreText: 'See more',
+    },
+    // Plastic Mechanics Hero
+    plasticMechanicsHero: {
+      heading: 'Plastic design and mechanical engineering',
+      description: 'We are a complete provider that designs mechanics and plastic parts in parallel with electronics development – ensuring optimal solutions from the start.',
+    },
+    // Plastic Mechanics Content
+    plasticMechanicsContent: {
+      heading: 'Unique expertise in holistic product development',
+      paragraph1: 'With 30 years of experience, we design optimal and manufacturable solutions. Our unique expertise lies in understanding the interaction between plastic parts, mechanics and electronics from the very beginning of the project.',
+      paragraph2: 'This experience ensures that the product can ultimately be assembled as efficiently as possible – saving time and costs in the production phase.',
+      features: [
+        'Parallel development: Mechanics and plastic parts are designed simultaneously with electronics development',
+        'Manufacturability in focus: 30 years of experience ensures solutions are optimal for production',
+        'Efficient assembly: Designed from the start for optimal mounting and production',
+      ],
+      imageAlt: 'Mechanical components and parts',
+    },
+    // Plastic Mechanics Collaboration
+    plasticMechanicsCollaboration: {
+      heading: 'Collaboration with design agencies',
+      paragraph1: 'In projects with high demands for design and visual expression, we collaborate with several excellent design agencies that contribute to creating the aesthetic expression.',
+      paragraph2: 'But it is still we who ensure that the design – with plastic parts, mechanics and electronics – is optimally executed. We ensure that beautiful designs also become production-ready and cost-effective solutions.',
+      imageAlt: 'Collaboration with design agencies',
+    },
+    // Plastic Mechanics Delivery
+    plasticMechanicsDelivery: {
+      title: 'From design to finished product',
+      subtitle: 'We deliver the entire value chain - from idea to finished plastic product in all sizes',
+      contentHeading: 'Our complete delivery',
+      cards: [
+        {
+          title: 'Design and engineering',
+          description: 'We design plastic parts and mechanics optimized for production and assembly',
+        },
+        {
+          title: 'Plastic molds and tools',
+          description: 'We create high-quality plastic molds for cost-effective production',
+        },
+        {
+          title: 'Prototypes',
+          description: 'Rapid prototypes for testing and validation before production',
+        },
+        {
+          title: 'Production in all sizes',
+          description: 'From small series to volume production - we deliver at the scale you need',
+        },
+      ],
+      imageAlt: 'Production process',
+    },
+    // Plastic Mechanics CTA
+    plasticMechanicsCTA: {
+      title: 'Ready to realize your product idea?',
+      description: 'Contact us for a non-binding conversation about your project',
+      buttonText: 'Contact us',
     },
     // Automotive Hero
     automotiveHero: {
