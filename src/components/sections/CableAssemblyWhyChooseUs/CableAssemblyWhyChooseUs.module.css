@@ -1,0 +1,164 @@
+.whyChooseUsSection {
+  background-color: #f5f7fa;
+  padding: 80px 40px;
+}
+
+.whyChooseUsWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.whyChooseUsHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.whyChooseUsTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.whyChooseUsSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whyChooseUsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.whyChooseUsCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.whyChooseUsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.whyChooseUsIconBox {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.whyChooseUsIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  display: block;
+}
+
+.whyChooseUsCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  text-transform: none;
+}
+
+.whyChooseUsCardDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .whyChooseUsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyChooseUsSection {
+    padding: 60px 40px;
+  }
+
+  .whyChooseUsHeader {
+    margin-bottom: 40px;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 28px;
+  }
+
+  .whyChooseUsSubtitle {
+    font-size: 16px;
+  }
+
+  .whyChooseUsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .whyChooseUsCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyChooseUsSection {
+    padding: 40px 20px;
+  }
+
+  .whyChooseUsHeader {
+    margin-bottom: 32px;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 24px;
+  }
+
+  .whyChooseUsSubtitle {
+    font-size: 15px;
+  }
+
+  .whyChooseUsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .whyChooseUsCard {
+    padding: 24px;
+  }
+
+  .whyChooseUsIconBox {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .whyChooseUsIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+

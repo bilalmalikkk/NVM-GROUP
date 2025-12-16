@@ -582,6 +582,135 @@ export const translations = {
       description: 'Kontakt oss for en uforpliktende samtale om ditt prosjekt',
       buttonText: 'Kontakt oss',
     },
+    // Cable Assembly Hero
+    cableAssemblyHero: {
+      heading: 'Kabelkonfeksjon til svært fordelaktige priser - tilpasset alle industrier',
+      description: 'Vi leverer skreddersydde kabel- og wire harness-løsninger med høy kvalitet og rask levering.',
+      quoteButton: 'Få et tilbud',
+      contactButton: 'Kontakt oss',
+      imageAlt: 'Kabelkonfeksjon og wire harness løsninger',
+    },
+    // Cable Assembly Solutions
+    cableAssemblySolutions: {
+      title: 'Våre løsninger',
+      subtitle: 'Komplett utvalg av kabelkonfeksjon for alle behov',
+      solutions: [
+        {
+          title: 'Elektrisk wire harness',
+          description: 'Komplette wire harness-løsninger for elektriske systemer',
+        },
+        {
+          title: 'Medisinsk kabelkonfeksjon',
+          description: 'Medisinsk godkjente kabel-løsninger med høyeste kvalitetskrav',
+        },
+        {
+          title: 'Maskin kabelkonfeksjon',
+          description: 'Robuste kabel-løsninger for maskiner og industriequipment',
+        },
+        {
+          title: 'Ny energi kjøretøy wire harness',
+          description: 'Moderne kabel-løsninger for elbiler og ny energi',
+        },
+        {
+          title: 'Automotive wire harness',
+          description: 'Automotive-sertifiserte kabel-løsninger for bilindustrien',
+        },
+        {
+          title: 'Industrielle automasjonskabler',
+          description: 'Høykvalitets kabler for automatisering og Industry 4.0',
+        },
+        {
+          title: 'Data & Kommunikasjonskabler',
+          description: 'Signalkabler og datakommunikasjon med lav støy',
+        },
+        {
+          title: 'Skreddersydde kabelkonfeksjoner',
+          description: 'Tilpassede løsninger i henhold til dine spesifikasjoner',
+        },
+        {
+          title: 'Sensor & aktuator kabling',
+          description: 'Presis kabling for sensorer og aktuatorer',
+        },
+        {
+          title: 'Strøm & styrekabler',
+          description: 'Kraftige kabel-løsninger for strømoverføring og styring',
+        },
+      ],
+    },
+    // Cable Assembly Why Choose Us
+    cableAssemblyWhyChooseUs: {
+      title: 'Hvorfor velge oss?',
+      subtitle: 'Vi leverer kvalitet, fleksibilitet og konkurransedyktige priser',
+      values: [
+        {
+          icon: 'TrendingUp',
+          title: 'Kostnadseffektive løsninger',
+          description: 'Svært konkurransedyktige priser uten å gå på kompromiss med kvaliteten',
+        },
+        {
+          icon: 'Award',
+          title: 'Høy kvalitet og sertifisering',
+          description: 'ISO, CE, RoHS sertifisert produksjon med strenge kvalitetskontroller',
+        },
+        {
+          icon: 'Shield',
+          title: 'Tilpasset for alle industrier',
+          description: 'Fra medisinsk til automotive – vi har erfaring med alle sektorer',
+        },
+        {
+          icon: 'Zap',
+          title: 'Rask levering og fleksibilitet',
+          description: 'Både små og store serier – rask respons og tilpasning til dine behov',
+        },
+      ],
+    },
+    // Cable Assembly Process
+    cableAssemblyProcess: {
+      title: 'Vår prosess',
+      subtitle: 'Fra idé til ferdig produkt på noen uker',
+      steps: [
+        {
+          icon: 'Settings',
+          title: 'Design',
+          description: 'Vi designer og prototyper kabel-løsningen i samarbeid med deg',
+        },
+        {
+          icon: 'Package',
+          title: 'Produksjon',
+          description: 'Produksjon i Asia under streng kvalitetskontroll. Fabrikken følger en rekke standarder som ISO14001, CE, UL og 16949',
+        },
+        {
+          icon: 'Truck',
+          title: 'Levering',
+          description: 'Rask og sikker levering direkte til deg',
+        },
+      ],
+    },
+    // Cable Assembly References
+    cableAssemblyReferences: {
+      title: 'Referanser & Anvendelser',
+      subtitle: 'Vi leverer til mange industrier med høye kvalitetskrav',
+      applications: [
+        {
+          title: 'Medisinsk utstyr',
+          description: 'Kabelkonfeksjon for medisinsk diagnostikk og overvåkingsutstyr med strenge sertifiseringskrav',
+        },
+        {
+          title: 'Automotive industri',
+          description: 'Wire harness for elbiler, ladesstasjoner og bilkomponenter',
+        },
+        {
+          title: 'Industri & automatisering',
+          description: 'Robuste kabel-løsninger for maskiner, roboter og industrielle kontrollsystemer',
+        },
+      ],
+    },
+    // Cable Assembly CTA
+    cableAssemblyCTA: {
+      title: 'Klar til å komme i gang?',
+      description: 'Kontakt oss for et uforpliktende tilbud på ditt kabelkonfeksjonsprosjekt',
+      buttonText: 'Få et tilbud',
+    },
     // Automotive Hero
     automotiveHero: {
       heading: 'NORDICRVM AUTOMOTIVE',
@@ -1295,6 +1424,135 @@ export const translations = {
       title: 'Ready to realize your product idea?',
       description: 'Contact us for a non-binding conversation about your project',
       buttonText: 'Contact us',
+    },
+    // Cable Assembly Hero
+    cableAssemblyHero: {
+      heading: 'Cable assembly at very favorable prices - adapted to all industries',
+      description: 'We deliver customized cable and wire harness solutions with high quality and fast delivery.',
+      quoteButton: 'Get a quote',
+      contactButton: 'Contact us',
+      imageAlt: 'Cable assembly and wire harness solutions',
+    },
+    // Cable Assembly Solutions
+    cableAssemblySolutions: {
+      title: 'Our solutions',
+      subtitle: 'Complete range of cable assembly for all needs',
+      solutions: [
+        {
+          title: 'Electric wire harness',
+          description: 'Complete wire harness solutions for electrical systems',
+        },
+        {
+          title: 'Medical cable assembly',
+          description: 'Medically approved cable solutions with highest quality requirements',
+        },
+        {
+          title: 'Machinery cable assembly',
+          description: 'Robust cable solutions for machinery and industrial equipment',
+        },
+        {
+          title: 'New energy vehicle wire harness',
+          description: 'Modern cable solutions for electric vehicles and new energy',
+        },
+        {
+          title: 'Automotive wire harness',
+          description: 'Automotive-certified cable solutions for the car industry',
+        },
+        {
+          title: 'Industrial automation cables',
+          description: 'High-quality cables for automation and Industry 4.0',
+        },
+        {
+          title: 'Data & Communication cables',
+          description: 'Signal cables and data communication with low noise',
+        },
+        {
+          title: 'Custom cable assemblies',
+          description: 'Tailor-made solutions according to your specifications',
+        },
+        {
+          title: 'Sensor & actuator wiring',
+          description: 'Precise cabling for sensors and actuators',
+        },
+        {
+          title: 'Power & Control cables',
+          description: 'Robust cable solutions for power transmission and control',
+        },
+      ],
+    },
+    // Cable Assembly Why Choose Us
+    cableAssemblyWhyChooseUs: {
+      title: 'Why choose us?',
+      subtitle: 'We deliver quality, flexibility and competitive prices',
+      values: [
+        {
+          icon: 'TrendingUp',
+          title: 'Cost-effective solutions',
+          description: 'Very competitive prices without compromising on quality',
+        },
+        {
+          icon: 'Award',
+          title: 'High quality and certification',
+          description: 'ISO, CE, RoHS certified production with strict quality controls',
+        },
+        {
+          icon: 'Shield',
+          title: 'Customized for all industries',
+          description: 'From medical to automotive – we have experience with all sectors',
+        },
+        {
+          icon: 'Zap',
+          title: 'Fast delivery and flexibility',
+          description: 'Both small and large series – quick response and adaptation to your needs',
+        },
+      ],
+    },
+    // Cable Assembly Process
+    cableAssemblyProcess: {
+      title: 'Our process',
+      subtitle: 'From idea to finished product in a few weeks',
+      steps: [
+        {
+          icon: 'Settings',
+          title: 'Design',
+          description: 'We design and prototype the cable solution in collaboration with you',
+        },
+        {
+          icon: 'Package',
+          title: 'Production',
+          description: 'Production in Asia under strict quality control. The factory follows a range of standards such as ISO14001, CE, UL and 16949',
+        },
+        {
+          icon: 'Truck',
+          title: 'Delivery',
+          description: 'Fast and secure delivery directly to you',
+        },
+      ],
+    },
+    // Cable Assembly References
+    cableAssemblyReferences: {
+      title: 'References & Applications',
+      subtitle: 'We deliver to many industries with high quality requirements',
+      applications: [
+        {
+          title: 'Medical equipment',
+          description: 'Cable assembly for medical diagnostics and monitoring equipment with strict certification requirements',
+        },
+        {
+          title: 'Automotive industry',
+          description: 'Wire harness for electric vehicles, charging stations and car components',
+        },
+        {
+          title: 'Industry & automation',
+          description: 'Robust cable solutions for machines, robots and industrial control systems',
+        },
+      ],
+    },
+    // Cable Assembly CTA
+    cableAssemblyCTA: {
+      title: 'Ready to get started?',
+      description: 'Contact us for a non-binding quote on your cable assembly project',
+      buttonText: 'Get a quote',
     },
     // Automotive Hero
     automotiveHero: {

@@ -1,0 +1,243 @@
+.processSection {
+  background-color: white;
+  padding: 80px 40px;
+}
+
+.processWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.processHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.processTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.processSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.processSteps {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.processStepContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.processStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.stepCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.stepNumberCircle {
+  width: 48px;
+  height: 48px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  z-index: 1;
+}
+
+.stepNumber {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.stepIconBox {
+  width: 64px;
+  height: 64px;
+  background-color: #e0f2fe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  border: 2px solid #3b82f6;
+}
+
+.stepIcon {
+  width: 24px;
+  height: 24px;
+  color: #1e3a5f;
+  display: block;
+}
+
+.stepTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  text-transform: none;
+}
+
+.stepDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+  flex: 1;
+}
+
+.stepArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .processSteps {
+    gap: 20px;
+  }
+
+  .processStepContainer {
+    gap: 16px;
+    min-width: 250px;
+  }
+
+  .stepArrow {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .processSection {
+    padding: 60px 40px;
+  }
+
+  .processHeader {
+    margin-bottom: 40px;
+  }
+
+  .processTitle {
+    font-size: 28px;
+  }
+
+  .processSubtitle {
+    font-size: 16px;
+  }
+
+  .processSteps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .processStepContainer {
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  .stepArrow {
+    transform: rotate(90deg);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .stepCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .processSection {
+    padding: 40px 20px;
+  }
+
+  .processHeader {
+    margin-bottom: 32px;
+  }
+
+  .processTitle {
+    font-size: 24px;
+  }
+
+  .processSubtitle {
+    font-size: 15px;
+  }
+
+  .processSteps {
+    gap: 32px;
+  }
+
+  .stepCard {
+    padding: 24px;
+  }
+
+  .stepIconBox {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+
+  .stepIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stepNumberCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stepNumber {
+    font-size: 18px;
+  }
+}
+

@@ -1,0 +1,164 @@
+.solutionsSection {
+  background-color: white;
+  padding: 80px 40px;
+}
+
+.solutionsWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.solutionsHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.solutionsTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.solutionsSubtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.solutionCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.solutionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.solutionIconBox {
+  width: 64px;
+  height: 64px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.solutionIcon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  display: block;
+}
+
+.solutionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  text-transform: none;
+}
+
+.solutionDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutionsSection {
+    padding: 60px 40px;
+  }
+
+  .solutionsHeader {
+    margin-bottom: 40px;
+  }
+
+  .solutionsTitle {
+    font-size: 28px;
+  }
+
+  .solutionsSubtitle {
+    font-size: 16px;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .solutionCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutionsSection {
+    padding: 40px 20px;
+  }
+
+  .solutionsHeader {
+    margin-bottom: 32px;
+  }
+
+  .solutionsTitle {
+    font-size: 24px;
+  }
+
+  .solutionsSubtitle {
+    font-size: 15px;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .solutionCard {
+    padding: 24px;
+  }
+
+  .solutionIconBox {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+
+  .solutionIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+

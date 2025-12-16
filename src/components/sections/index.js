@@ -31,4 +31,10 @@ export { PlasticMechanicsContent } from './PlasticMechanicsContent/PlasticMechan
 export { PlasticMechanicsCollaboration } from './PlasticMechanicsCollaboration/PlasticMechanicsCollaboration';
 export { PlasticMechanicsDelivery } from './PlasticMechanicsDelivery/PlasticMechanicsDelivery';
 export { PlasticMechanicsCTA } from './PlasticMechanicsCTA/PlasticMechanicsCTA';
+export { CableAssemblyHero } from './CableAssemblyHero/CableAssemblyHero';
+export { CableAssemblySolutions } from './CableAssemblySolutions/CableAssemblySolutions';
+export { CableAssemblyWhyChooseUs } from './CableAssemblyWhyChooseUs/CableAssemblyWhyChooseUs';
+export { CableAssemblyProcess } from './CableAssemblyProcess/CableAssemblyProcess';
+export { CableAssemblyReferences } from './CableAssemblyReferences/CableAssemblyReferences';
+export { CableAssemblyCTA } from './CableAssemblyCTA/CableAssemblyCTA';
 
