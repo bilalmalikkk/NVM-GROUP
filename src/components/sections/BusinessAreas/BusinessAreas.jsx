@@ -2,14 +2,16 @@ import React from 'react';
 import iconsImage from '../../../assets/business-icons.png';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import styles from './BusinessAreas.module.css';
 
 export function BusinessAreas() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section id="business" className={styles.businessAreasSection}>
+    <section id="business" ref={ref} className={`${styles.businessAreasSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.businessAreasWrapper}>
         <h2 className={styles.businessAreasTitle}>
           {t.businessAreas.title}
@@ -18,20 +20,7 @@ export function BusinessAreas() {
           {t.businessAreas.areas.map((area, index) => {
             return (
               <div key={index} className={styles.businessAreaItem}>
-                <div
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '96px',
-                    height: '96px',
-                    backgroundColor: 'white',
-                    borderRadius: '50%',
-                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-                    marginBottom: '24px',
-                    overflow: 'hidden',
-                  }}
-                >
+                <div className={styles.iconCircle}>
                   <img
                     src={iconsImage}
                     alt={t.businessAreas.iconAlt}

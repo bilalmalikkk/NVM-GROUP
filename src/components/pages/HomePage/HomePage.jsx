@@ -5,6 +5,7 @@ import { BusinessAreas } from '../../sections/BusinessAreas/BusinessAreas';
 import { WhyChooseUs } from '../../sections/WhyChooseUs/WhyChooseUs';
 import { ProjectShowcase } from '../../sections/ProjectShowcase/ProjectShowcase';
 import { ContactCTA } from '../../sections/ContactCTA/ContactCTA';
+import { ScrollToTop } from '../../common/ScrollToTop/ScrollToTop';
 
 export function HomePage() {
   return (
@@ -15,6 +16,7 @@ export function HomePage() {
       <WhyChooseUs />
       <ProjectShowcase />
       <ContactCTA />
+      <ScrollToTop />
     </div>
   );
 }

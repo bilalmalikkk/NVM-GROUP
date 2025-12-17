@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, Car, Cpu, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import styles from './ProjectShowcase.module.css';
 
 const iconMap = {
@@ -13,9 +14,10 @@ const iconMap = {
 export function ProjectShowcase() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className={styles.referencesSection}>
+    <section ref={ref} className={`${styles.referencesSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.referencesHeader}>
         <h2 className={styles.referencesTitle}>{t.projectShowcase.title}</h2>
         <p className={styles.referencesSubtitle}>{t.projectShowcase.subtitle}</p>

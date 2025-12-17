@@ -1,6 +1,14 @@
 .aboutSection {
   background-color: white;
   padding: 80px 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.aboutSection.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .aboutContainer {
@@ -41,6 +49,12 @@
   min-height: 400px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cardHeader {

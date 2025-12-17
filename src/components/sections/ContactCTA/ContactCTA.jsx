@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Calendar } from 'lucide-react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import styles from './ContactCTA.module.css';
 
 export function ContactCTA() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,7 +30,7 @@ export function ContactCTA() {
   };
 
   return (
-    <section id="contact" className={styles.contactSection}>
+    <section id="contact" ref={ref} className={`${styles.contactSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.contactHeader}>
         <h2 className={styles.contactMainTitle}>{t.contactCTA.title}</h2>
         <p className={styles.contactSubtitle}>

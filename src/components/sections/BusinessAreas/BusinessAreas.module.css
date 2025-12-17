@@ -1,6 +1,14 @@
 .businessAreasSection {
   background-color: #f8f9fa;
   padding: 96px 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.businessAreasSection.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .businessAreasWrapper {
@@ -24,6 +32,31 @@
 
 .businessAreaItem {
   text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.businessAreaItem:hover {
+  transform: translateY(-10px);
+}
+
+.businessAreaItem:hover .iconCircle {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.iconCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
