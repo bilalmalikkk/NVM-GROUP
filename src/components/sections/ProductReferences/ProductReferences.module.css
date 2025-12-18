@@ -1,6 +1,14 @@
 .productReferencesSection {
   background-color: #f8f9fa;
   padding: 120px 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.productReferencesSection.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .productReferencesContainer {
@@ -39,14 +47,24 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .productCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.1);
+}
+
+.productCard:hover .productButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: translateY(-2px);
 }
 
 .productImageWrapper {
@@ -61,6 +79,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
 
 .productContent {
@@ -124,13 +143,15 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
   margin-top: auto;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
 }
 
 .productButton:hover {
   background-color: #45a049;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
 
 .productButton:active {

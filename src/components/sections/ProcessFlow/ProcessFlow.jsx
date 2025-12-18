@@ -1,14 +1,16 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import styles from './ProcessFlow.module.css';
 
 export function ProcessFlow() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className={styles.processFlowSection}>
+    <section ref={ref} className={`${styles.processFlowSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.processFlowContainer}>
         <h2 className={styles.processFlowTitle}>{t.processFlow.title}</h2>
         <div className={styles.processSteps}>

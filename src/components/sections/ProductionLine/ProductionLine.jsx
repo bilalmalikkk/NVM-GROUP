@@ -1,14 +1,16 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import styles from './ProductionLine.module.css';
 
 export function ProductionLine() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className={styles.productionLineSection}>
+    <section ref={ref} className={`${styles.productionLineSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.productionLineContainer}>
         <div className={styles.productionLineImage}>
           <img 

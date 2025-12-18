@@ -1,6 +1,14 @@
 .productionLineSection {
   background-color: white;
   padding: 120px 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.productionLineSection.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .productionLineContainer {
@@ -19,6 +27,12 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productionLineImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
 .productionImage {
@@ -26,6 +40,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.productionLineImage:hover .productionImage {
+  transform: scale(1.05);
 }
 
 .productionLineContent {

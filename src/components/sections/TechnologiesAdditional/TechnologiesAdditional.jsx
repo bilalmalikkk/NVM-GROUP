@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { Radio, Cloud, Code } from 'lucide-react';
 import styles from './TechnologiesAdditional.module.css';
 
 export function TechnologiesAdditional() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const iconMap = {
     Radio: Radio,
@@ -15,7 +17,7 @@ export function TechnologiesAdditional() {
   };
 
   return (
-    <section className={styles.technologiesAdditionalSection}>
+    <section ref={ref} className={`${styles.technologiesAdditionalSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.technologiesAdditionalContainer}>
         <div className={styles.technologiesAdditionalGrid}>
           {t.technologiesAdditional.categories.map((category, index) => {

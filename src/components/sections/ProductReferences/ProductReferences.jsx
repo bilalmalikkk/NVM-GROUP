@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { ExternalLink } from 'lucide-react';
 import styles from './ProductReferences.module.css';
 
@@ -33,9 +34,10 @@ const productImageMap = {
 export function ProductReferences() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className={styles.productReferencesSection}>
+    <section ref={ref} className={`${styles.productReferencesSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.productReferencesContainer}>
         <div className={styles.productReferencesHeader}>
           <h2 className={styles.productReferencesTitle}>{t.productReferences.title}</h2>

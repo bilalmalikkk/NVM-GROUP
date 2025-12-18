@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { Wrench, Cpu, Monitor } from 'lucide-react';
 import styles from './Technologies.module.css';
 
 export function Technologies() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const iconMap = {
     Wrench: Wrench,
@@ -15,7 +17,7 @@ export function Technologies() {
   };
 
   return (
-    <section className={styles.technologiesSection}>
+    <section ref={ref} className={`${styles.technologiesSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.technologiesContainer}>
         <h2 className={styles.technologiesTitle}>{t.technologies.title}</h2>
         <p className={styles.technologiesIntro}>{t.technologies.intro}</p>

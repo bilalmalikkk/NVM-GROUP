@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
+import { useScrollAnimation } from '../../../hooks/useScrollAnimation';
 import { Network, Cog } from 'lucide-react';
 import styles from './TechnologiesDetail.module.css';
 
 export function TechnologiesDetail() {
   const { language } = useLanguage();
   const t = getTranslations(language);
+  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const iconMap = {
     Network: Network,
@@ -14,7 +16,7 @@ export function TechnologiesDetail() {
   };
 
   return (
-    <section className={styles.technologiesDetailSection}>
+    <section ref={ref} className={`${styles.technologiesDetailSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.technologiesDetailContainer}>
         <div className={styles.technologiesDetailGrid}>
           {t.technologiesDetail.categories.map((category, index) => {

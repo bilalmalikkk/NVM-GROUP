@@ -8,6 +8,7 @@ import { TechnologiesAdditional } from '../../sections/TechnologiesAdditional/Te
 import { ProductionLine } from '../../sections/ProductionLine/ProductionLine';
 import { ProductReferences } from '../../sections/ProductReferences/ProductReferences';
 import { ProjectCTA } from '../../sections/ProjectCTA/ProjectCTA';
+import { ScrollToTop } from '../../common/ScrollToTop/ScrollToTop';
 
 export function ProjectPage() {
   return (
@@ -21,6 +22,7 @@ export function ProjectPage() {
       <ProductionLine />
       <ProductReferences />
       <ProjectCTA />
+      <ScrollToTop />
     </div>
   );
 }
