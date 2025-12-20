@@ -71,6 +71,17 @@ export function Header({ currentPage, setCurrentPage }) {
       </nav>
       <nav className={styles.primaryNav}>
         <div className={styles.primaryNavContainer}>
+          <button
+            onClick={() => setCurrentPage(language === 'no' ? 'Hjem' : 'Home')}
+            className={styles.logoContainer}
+            aria-label="Home"
+          >
+            <img 
+              src="/NordicRVM_Logo_R2.png" 
+              alt="Nordic RVM Logo" 
+              className={styles.logo}
+            />
+          </button>
           <div className={styles.primaryNavLinks}>
             {bottomMenuItems.map((item, index) => (
               <button

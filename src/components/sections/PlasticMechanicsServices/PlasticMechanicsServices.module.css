@@ -1,0 +1,256 @@
+.servicesSection {
+  background-color: white;
+  padding: 120px 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.servicesSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.servicesContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.servicesHeader {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.headerText {
+  text-align: center;
+  width: 100%;
+}
+
+.headerButtons {
+  display: none;
+}
+
+.servicesTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.servicesDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.carouselContainer {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+  flex: 1;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.servicesGrid {
+  display: flex;
+  gap: 24px;
+  padding: 0 20px;
+  width: max-content;
+}
+
+.serviceCard {
+  flex: 0 0 280px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.serviceImageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  position: relative;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover .serviceImage {
+  transform: scale(1.05);
+}
+
+.serviceOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  padding: 20px 16px 16px;
+}
+
+.serviceTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.carouselButton {
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333333;
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+}
+
+.carouselButton:hover {
+  background-color: #d4d4d4;
+  transform: scale(1.1);
+}
+
+.carouselButton:active {
+  transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .servicesSection {
+    padding: 80px 40px;
+  }
+
+  .servicesTitle {
+    font-size: 36px;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .headerButtons {
+    align-self: flex-end;
+  }
+
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 60px 20px;
+  }
+
+  .servicesHeader {
+    margin-bottom: 40px;
+  }
+
+  .servicesTitle {
+    font-size: 32px;
+  }
+
+  .servicesDescription {
+    font-size: 16px;
+  }
+
+  .serviceCard {
+    flex: 0 0 260px;
+  }
+
+  .serviceImageWrapper {
+    height: 200px;
+  }
+
+  .serviceTitle {
+    font-size: 16px;
+  }
+
+  .carouselButton {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesTitle {
+    font-size: 28px;
+  }
+
+  .servicesDescription {
+    font-size: 15px;
+  }
+
+  .serviceCard {
+    flex: 0 0 240px;
+  }
+
+  .serviceImageWrapper {
+    height: 180px;
+  }
+
+  .serviceTitle {
+    font-size: 15px;
+    padding: 16px 12px 12px;
+  }
+}
+

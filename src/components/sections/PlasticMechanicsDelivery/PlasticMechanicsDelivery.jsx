@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
-import deliveryImage from '../../../assets/photo-1657186593846-8d3e67155468.jpeg';
 import styles from './PlasticMechanicsDelivery.module.css';
 
 export function PlasticMechanicsDelivery() {
@@ -22,7 +21,7 @@ export function PlasticMechanicsDelivery() {
         <div className={styles.deliveryContainer}>
           <div className={styles.deliveryImage}>
             <img 
-              src={deliveryImage} 
+              src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80"
               alt={t.plasticMechanicsDelivery.imageAlt}
               className={styles.image}
             />

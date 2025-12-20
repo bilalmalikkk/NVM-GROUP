@@ -4,6 +4,7 @@ export { BusinessAreas } from './BusinessAreas/BusinessAreas';
 export { WhyChooseUs } from './WhyChooseUs/WhyChooseUs';
 export { ProjectShowcase } from './ProjectShowcase/ProjectShowcase';
 export { ContactCTA } from './ContactCTA/ContactCTA';
+export { PlasticMechanicsServices } from './PlasticMechanicsServices/PlasticMechanicsServices';
 export { ProjectHero } from './ProjectHero/ProjectHero';
 export { ProjectContent } from './ProjectContent/ProjectContent';
 export { ProcessFlow } from './ProcessFlow/ProcessFlow';

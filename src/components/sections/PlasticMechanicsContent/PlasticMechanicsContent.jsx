@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
 import { getTranslations } from '../../../constants/translations';
-import mechanicsImage from '../../../assets/photo-1715322506425-2fc19fe0fc5f.jpeg';
+import moldImage from '../../../assets/mold_picture.jpg';
 import styles from './PlasticMechanicsContent.module.css';
 
 export function PlasticMechanicsContent() {
@@ -32,7 +32,7 @@ export function PlasticMechanicsContent() {
         </div>
         <div className={styles.contentImage}>
           <img 
-            src={mechanicsImage} 
+            src={moldImage} 
             alt={t.plasticMechanicsContent.imageAlt}
             className={styles.image}
           />

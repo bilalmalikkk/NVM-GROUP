@@ -61,7 +61,7 @@
 }
 
 .projectCardTop {
-  background: linear-gradient(180deg, #1a3a5f 0%, #0f2537 100%);
+  background: linear-gradient(180deg, #1a1f2e 0%, #0f1419 100%);
   height: 200px;
   display: flex;
   align-items: center;
@@ -142,7 +142,7 @@
 }
 
 .viewMoreBtn {
-  background-color: #1a3a5f;
+  background-color: #1a1f2e;
   color: white;
   border: none;
   padding: 16px 40px;
@@ -157,7 +157,7 @@
 }
 
 .viewMoreBtn:hover {
-  background-color: #0f2537;
+  background-color: #0f1419;
   transform: translateY(-2px);
 }
 

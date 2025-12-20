@@ -576,6 +576,88 @@ export const translations = {
       ],
       imageAlt: 'Produksjonsprosess',
     },
+    // Plastic Mechanics Services
+    plasticMechanicsServices: {
+      title: 'Våre tjenester',
+      description: 'Vi fokuserer på aluminium støping, EV reservedeler, CNC bearbeiding, CNC dreie deler og lignende tjenester',
+      services: [
+        {
+          title: 'Aluminium støping',
+          description: 'Vi har mer enn 70 støpemaskiner fra 280T til 4000T, og den største støpevekten kan være 50KG. Vi har også mer enn 200 CNC bearbeidingssentre',
+          image: 'https://www.cnbenky.com/photo/cd104841837-aluminum_die_casting.jpg',
+        },
+        {
+          title: 'EV reservedeler',
+          description: 'Aluminium, messing, bronse, kobber, herdet metaller, rustfritt stål',
+          image: 'https://www.cnbenky.com/photo/cd104842839-ev_spare_parts.jpg',
+        },
+        {
+          title: 'CNC bearbeidingsdeler',
+          description: 'Vi har vært i CNC bearbeidingsindustrien siden 1990, spesialiserer seg på elektroniske produkter, bildeler, medisinske enheter, roboter, elektroniske kabinett, kaffemaskiner og andre funksjonelle prosjekter.',
+          image: 'https://www.cnbenky.com/photo/cd104455861-cnc_machining_parts.jpg',
+        },
+        {
+          title: 'CNC dreiedeler',
+          description: 'CNC bearbeiding for aluminium, messing, bronse, kobber, herdet metaller, rustfritt stål',
+          image: 'https://www.cnbenky.com/photo/cd104842246-cnc_turning_parts.jpg',
+        },
+        {
+          title: 'CNC fresedeler',
+          description: 'CNC bearbeiding som en av produsentene',
+          image: 'https://www.cnbenky.com/photo/cd104842525-cnc_milling_parts.jpg',
+        },
+        {
+          title: 'Tilpassede elektroniske kabinett',
+          description: 'Tilpasset presisjon 5-akse CNC bearbeidingstjenester for mobiltelefonkabinett, nettbrett, høyttaler, tastatur og andre elektroniske produkter',
+          image: 'https://www.cnbenky.com/photo/cd104737431-custom_electronic_enclosures.jpg',
+        },
+        {
+          title: 'Tilpassede plaststøpte deler',
+          description: 'Høy kvalitet tilpasset formgivning av elektroniske ABS plastdeler, plastprodukter støpingstjeneste',
+          image: 'https://www.cnbenky.com/photo/cd104844901-custom_plastic_injection_parts.jpg',
+        },
+        {
+          title: 'Plaststøpeformer',
+          description: 'ODM støping plastform',
+          image: 'https://www.cnbenky.com/photo/cd104803109-plastic_injection_moulds.jpg',
+        },
+        {
+          title: 'Støpeform',
+          description: 'Presisjon støpeform, formdesign, formproduksjon',
+          image: 'https://www.cnbenky.com/photo/cd104461657-die_casting_mould.jpg',
+        },
+        {
+          title: 'Støpte bildeler',
+          description: 'Bilgirkasse, bilramme, bilkarosseri B-stolpe, bilkraftstyreringsgirkasse, bilmotorkabinett',
+          image: 'https://www.cnbenky.com/photo/cd104460582-die_casting_auto_parts.jpg',
+        },
+        {
+          title: 'Støpt LED-hus',
+          description: 'OEM tilpasset støping LED-spotlys, LED-taklys, LED-stadionlys, LED-sporlys, LED PAR-lys, LED-gruvelylys, LED-kjøkken og badlys.',
+          image: 'https://www.cnbenky.com/photo/cd104844183-die_casting_led_housing.jpg',
+        },
+        {
+          title: 'Kontormøbel reservedeler',
+          description: 'Skjermarm armer puter svingkontor stoler del armstøtte roterende plast gamer andre møbler produsent Steelcase stol deler.',
+          image: 'https://www.cnbenky.com/photo/cd97985587-office_furniture_spare_parts.jpg',
+        },
+        {
+          title: 'Sink støping',
+          description: '3C-industri, belysningsdekorasjon, elektriske apparater, bildeler, møbeldeler, elektrisk verktøy, medisinsk utstyr, intelligent automasjonsutstyr, andre metallstøpedeler',
+          image: 'https://www.cnbenky.com/photo/cd105137277-zinc_die_casting.jpg',
+        },
+        {
+          title: 'Aluminium ekstrudering',
+          description: 'Gull ekstrudering messing, forsterker varmesink aluminium ekstrudert, hjemmedyrking, drivhus, støpt varmesink kabinett, dør og vindu, akvarium LED-belysning',
+          image: 'https://www.cnbenky.com/photo/cd104845365-aluminum_extrusion_processing.jpg',
+        },
+        {
+          title: 'Rask prototyping tjenester',
+          description: 'CNC aluminium rask prototyping, CNC plast rask prototyping, 3D-printing rask prototyping, metall del prototyping, CNC bearbeiding ABS /PC rask prototype',
+          image: 'https://www.cnbenky.com/photo/cd104845836-rapid_prototyping_services.jpg',
+        },
+      ],
+    },
     // Plastic Mechanics CTA
     plasticMechanicsCTA: {
       title: 'Klar til å realisere din produktidé?',
@@ -1420,6 +1502,88 @@ export const translations = {
       imageAlt: 'Production process',
     },
     // Plastic Mechanics CTA
+    // Plastic Mechanics Services
+    plasticMechanicsServices: {
+      title: 'Our Service',
+      description: 'We focus on Aluminum Die Casting, EV Spare Parts, CNC Machining Parts, CNC Turning Parts services and so on',
+      services: [
+        {
+          title: 'Aluminum Die Casting',
+          description: 'We have more than 70 die-casting machines ranging from 280T to 4000T, and the largest casting weight can be 50KG. We also have more than 200 CNC machining centers',
+          image: 'https://www.cnbenky.com/photo/cd104841837-aluminum_die_casting.jpg',
+        },
+        {
+          title: 'EV Spare Parts',
+          description: 'Aluminum, Brass, Bronze, Copper, Hardened Metals, Stainless Steel',
+          image: 'https://www.cnbenky.com/photo/cd104842839-ev_spare_parts.jpg',
+        },
+        {
+          title: 'CNC Machining Parts',
+          description: 'We are in CNC machining industry since 1990, specializes in electronic products, Car Parts, Medical devices, Robot, Electronic Case Coffee machine and other functional projects.',
+          image: 'https://www.cnbenky.com/photo/cd104455861-cnc_machining_parts.jpg',
+        },
+        {
+          title: 'CNC Turning Parts',
+          description: 'CNC Machining for Aluminum, Brass, Bronze, Copper, Hardened Metals, Stainless Steel',
+          image: 'https://www.cnbenky.com/photo/cd104842246-cnc_turning_parts.jpg',
+        },
+        {
+          title: 'CNC Milling Parts',
+          description: 'CNC processing as one of the manufacturers',
+          image: 'https://www.cnbenky.com/photo/cd104842525-cnc_milling_parts.jpg',
+        },
+        {
+          title: 'Custom Electronic Enclosures',
+          description: 'Custom Precision 5 axis cnc machining services for Mobile phone case, tablet, speaker, keyboard and other electronic products shell',
+          image: 'https://www.cnbenky.com/photo/cd104737431-custom_electronic_enclosures.jpg',
+        },
+        {
+          title: 'Custom Plastic Injection Parts',
+          description: 'High Quality custom molding electronic ABS plastic parts plastic products Injection Molding Service',
+          image: 'https://www.cnbenky.com/photo/cd104844901-custom_plastic_injection_parts.jpg',
+        },
+        {
+          title: 'Plastic Injection Moulds',
+          description: 'ODM Injection Plastic Mould',
+          image: 'https://www.cnbenky.com/photo/cd104803109-plastic_injection_moulds.jpg',
+        },
+        {
+          title: 'Die Casting Mould',
+          description: 'Precision die casting mould, Mould design, Mould manufacturing',
+          image: 'https://www.cnbenky.com/photo/cd104461657-die_casting_mould.jpg',
+        },
+        {
+          title: 'Die Casting Auto Parts',
+          description: 'Automobile transmission case, automobile frame, automobile body B pillar, automobile power steering gear case, automobile engine case',
+          image: 'https://www.cnbenky.com/photo/cd104460582-die_casting_auto_parts.jpg',
+        },
+        {
+          title: 'Die Casting LED Housing',
+          description: 'OEM Custom Die Casting Led spotlights, LED ceiling lights, LED ballpark lights, LED track lights, LED PAR lights, LED mining lights, LED kitchen and bathroom lights.',
+          image: 'https://www.cnbenky.com/photo/cd104844183-die_casting_led_housing.jpg',
+        },
+        {
+          title: 'Office Furniture Spare Parts',
+          description: 'Monitor Arm Arms Pads Swivel Spare Office Chairs Part Armrest Revolving Plastic Gamer Other Furniture Manufacturer Steelcase Chair Parts.',
+          image: 'https://www.cnbenky.com/photo/cd97985587-office_furniture_spare_parts.jpg',
+        },
+        {
+          title: 'Zinc Die Casting',
+          description: '3C industry, lighting decoration, electrical appliances, auto parts, furniture parts, electric tool, medical equipment, intelligent automation equipment, other metal casting parts',
+          image: 'https://www.cnbenky.com/photo/cd105137277-zinc_die_casting.jpg',
+        },
+        {
+          title: 'Aluminum Extrusion Processing',
+          description: 'Golden Extrusion Brass, power amplifier heat sink aluminium extruded, Home Grow, Greenhouse, die cast heatsink enclosure, Door & Window, Aquarium Led Lighting',
+          image: 'https://www.cnbenky.com/photo/cd104845365-aluminum_extrusion_processing.jpg',
+        },
+        {
+          title: 'Rapid Prototyping Services',
+          description: 'CNC Aluminum Rapid prototyping, CNC Plastic Rapid Prototyping, 3D Printing Rapid Prototyping, Metal part Prototyping, CNC machining ABS /PC rapid prototype',
+          image: 'https://www.cnbenky.com/photo/cd104845836-rapid_prototyping_services.jpg',
+        },
+      ],
+    },
     plasticMechanicsCTA: {
       title: 'Ready to realize your product idea?',
       description: 'Contact us for a non-binding conversation about your project',
