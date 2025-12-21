@@ -419,6 +419,38 @@ export const translations = {
         }
       ]
     },
+    // News
+    news: {
+      title: 'Nyheter',
+      subtitle: 'Hold deg oppdatert med våre siste nyheter og oppdateringer',
+      readMore: 'Les mer',
+      items: [
+        {
+          title: 'Ny innovasjon innen velferdsteknologi',
+          description: 'Vi lanserer vårt nye Cam-X2 system med forbedret falldeteksjon og AI-teknologi for bedre omsorg.',
+          date: '15. januar 2024',
+          imageKey: 'cam-x2',
+          imageAlt: 'Velferdsteknologi innovasjon',
+          link: '#'
+        },
+        {
+          title: 'Partnerskap med ledende automotive produsenter',
+          description: 'Nordic RVM Group inngår strategisk partnerskap for å utvide vårt tilbud innen automotive styringssystemer.',
+          date: '8. januar 2024',
+          imageKey: 'partners',
+          imageAlt: 'Automotive partnerskap',
+          link: '#'
+        },
+        {
+          title: 'Utvidelse av produksjonskapasitet',
+          description: 'Vi investerer i ny produksjonslinje for å møte økt etterspørsel og levere raskere til våre kunder.',
+          date: '2. januar 2024',
+          imageKey: 'production',
+          imageAlt: 'Produksjonslinje utvidelse',
+          link: '#'
+        }
+      ]
+    },
     // Project Showcase
     projectShowcase: {
       title: 'Referanser & Prosjekter',
@@ -1341,6 +1373,38 @@ export const translations = {
           icon: 'Cog',
           title: 'Complete value chain',
           description: 'From R&D and prototyping to production and certification – we handle it all.'
+        }
+      ]
+    },
+    // News
+    news: {
+      title: 'News',
+      subtitle: 'Stay updated with our latest news and updates',
+      readMore: 'Read more',
+      items: [
+        {
+          title: 'New innovation in welfare technology',
+          description: 'We launch our new Cam-X2 system with improved fall detection and AI technology for better care.',
+          date: 'January 15, 2024',
+          imageKey: 'cam-x2',
+          imageAlt: 'Welfare technology innovation',
+          link: '#'
+        },
+        {
+          title: 'Partnership with leading automotive manufacturers',
+          description: 'Nordic RVM Group enters strategic partnership to expand our offering in automotive control systems.',
+          date: 'January 8, 2024',
+          imageKey: 'partners',
+          imageAlt: 'Automotive partnership',
+          link: '#'
+        },
+        {
+          title: 'Expansion of production capacity',
+          description: 'We invest in new production line to meet increased demand and deliver faster to our customers.',
+          date: 'January 2, 2024',
+          imageKey: 'production',
+          imageAlt: 'Production line expansion',
+          link: '#'
         }
       ]
     },
