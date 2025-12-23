@@ -82,16 +82,27 @@ export function Header({ currentPage, setCurrentPage }) {
           </button>
           <div className={styles.primaryNavLinks}>
             {bottomMenuItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setCurrentPage(item.label);
-                  setMobileMenuOpen(false);
-                }}
-                className={currentPage === item.label ? styles.active : ''}
-              >
-                {item.label}
-              </button>
+              item.external || item.href?.startsWith('http') ? (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setCurrentPage(item.label);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={currentPage === item.label ? styles.active : ''}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
           <button
@@ -105,16 +116,29 @@ export function Header({ currentPage, setCurrentPage }) {
         {mobileMenuOpen && (
           <div className={styles.mobileMenuDropdown}>
             {bottomMenuItems.map((item, index) => (
-              <button
-                key={`bottom-${index}`}
-                onClick={() => {
-                  setCurrentPage(item.label);
-                  setMobileMenuOpen(false);
-                }}
-                className={`${styles.mobileMenuItem} ${currentPage === item.label ? styles.active : ''}`}
-              >
-                {item.label}
-              </button>
+              item.external || item.href?.startsWith('http') ? (
+                <a
+                  key={`bottom-${index}`}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileMenuItem}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={`bottom-${index}`}
+                  onClick={() => {
+                    setCurrentPage(item.label);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`${styles.mobileMenuItem} ${currentPage === item.label ? styles.active : ''}`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
             <div className={styles.mobileMenuDivider}></div>
             <div className={styles.mobileSubmenu}>
