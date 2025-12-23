@@ -116,6 +116,19 @@
   text-decoration: underline;
 }
 
+.newsLoading,
+.newsError,
+.newsEmpty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+.newsError {
+  color: #ef4444;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .newsGrid {
