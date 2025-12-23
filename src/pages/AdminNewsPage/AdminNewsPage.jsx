@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2, Save, X, Eye, EyeOff } from 'lucide-react';
 import styles from './AdminNewsPage.module.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.PROD 
+    ? 'https://nordic-medtek-cms-production.up.railway.app'
+    : 'http://localhost:3001');
 
 export function AdminNewsPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -138,23 +141,85 @@ export function AdminNewsPage() {
       
       const method = editingItem ? 'PUT' : 'POST';
 
+      // Prepare data for submission
+      const submitData = {
+        title: formData.title,
+        // Convert date to ISO 8601 format if it's in YYYY-MM-DD format
+        date: formData.date ? (formData.date.includes('T') ? formData.date : `${formData.date}T00:00:00.000Z`) : new Date().toISOString(),
+        status: formData.status,
+        language: formData.language,
+        // Remove empty strings and convert to null
+        description: formData.description || null,
+        content: formData.content || null,
+        // Only include image_key if image_url is not set
+        image_key: formData.image_url ? null : (formData.image_key || null),
+        image_url: formData.image_url || null,
+        link: formData.link || null
+      };
+
+      // Remove undefined values
+      Object.keys(submitData).forEach(key => {
+        if (submitData[key] === undefined) {
+          delete submitData[key];
+        }
+      });
+
+      console.log('Submitting news data:', submitData);
+
+      console.log('Submitting to:', url);
+      console.log('Method:', method);
+      console.log('Submit data:', submitData);
+
       const response = await fetch(url, {
         method,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(submitData)
       });
 
-      const data = await response.json();
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+      let data;
+      const responseText = await response.text();
+      console.log('Response text:', responseText);
+      
+      try {
+        data = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error('Failed to parse response as JSON:', parseError);
+        alert(`Server error: ${response.status} ${response.statusText}\nResponse: ${responseText}`);
+        return;
+      }
 
       if (response.ok) {
         await fetchNews();
         resetForm();
         alert(editingItem ? 'News updated successfully' : 'News created successfully');
       } else {
-        alert(data.error || 'Operation failed');
+        // Show detailed error message
+        const errorMsg = data.error || data.message || 'Operation failed';
+        let errorDetails = '';
+        
+        if (data.errors && Array.isArray(data.errors)) {
+          errorDetails = data.errors.map(e => {
+            if (typeof e === 'string') return e;
+            return e.msg || e.message || JSON.stringify(e);
+          }).join('\n');
+        } else if (data.details) {
+          errorDetails = typeof data.details === 'string' ? data.details : JSON.stringify(data.details);
+        }
+        
+        const fullError = errorDetails ? `${errorMsg}\n\nDetails:\n${errorDetails}` : errorMsg;
+        alert(fullError);
+        console.error('News operation error:', {
+          status: response.status,
+          statusText: response.statusText,
+          data: data,
+          submittedData: submitData
+        });
       }
     } catch (error) {
       console.error('Submit error:', error);
@@ -230,26 +295,28 @@ export function AdminNewsPage() {
     // Validate file type
     if (!file.type.startsWith('image/')) {
       alert('Please select an image file');
+      e.target.value = ''; // Reset file input
       return;
     }
 
     // Validate file size (10MB)
     if (file.size > 10 * 1024 * 1024) {
       alert('Image size must be less than 10MB');
+      e.target.value = ''; // Reset file input
       return;
     }
 
     try {
       setUploadingImage(true);
-      const formData = new FormData();
-      formData.append('file', file);
+      const uploadFormData = new FormData();
+      uploadFormData.append('file', file);
 
       const response = await fetch(`${API_BASE_URL}/api/upload/single`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
         },
-        body: formData
+        body: uploadFormData
       });
 
       const data = await response.json();
@@ -257,7 +324,7 @@ export function AdminNewsPage() {
       if (response.ok) {
         // Set the image URL - the API returns url like /uploads/images/...
         const imageUrl = data.media.url;
-        setFormData({ ...formData, image_url: imageUrl, image_key: '' });
+        setFormData(prev => ({ ...prev, image_url: imageUrl, image_key: '' }));
         
         // Set preview
         if (imageUrl.startsWith('http')) {
@@ -268,13 +335,16 @@ export function AdminNewsPage() {
         
         alert('Image uploaded successfully');
       } else {
-        alert(data.error || 'Failed to upload image');
+        const errorMsg = data.error || data.message || 'Failed to upload image';
+        alert(`Image upload failed: ${errorMsg}`);
+        console.error('Upload error response:', data);
       }
     } catch (error) {
       console.error('Upload error:', error);
       alert('Failed to upload image: ' + error.message);
     } finally {
       setUploadingImage(false);
+      e.target.value = ''; // Reset file input
     }
   };
 

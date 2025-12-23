@@ -17,7 +17,10 @@ const newsImageMap = {
 };
 
 // API base URL - use environment variable or fallback
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.PROD 
+    ? 'https://nordic-medtek-cms-production.up.railway.app'
+    : 'http://localhost:3001');
 
 export function News() {
   const { language } = useLanguage();
