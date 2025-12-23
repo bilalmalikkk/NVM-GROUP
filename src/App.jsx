@@ -12,10 +12,29 @@ function App() {
 
   // Check if admin route is requested
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash === '#/admin' || hash === '#admin' || window.location.pathname.includes('admin')) {
-      setShowAdmin(true);
-    }
+    const checkAdminRoute = () => {
+      const hash = window.location.hash;
+      const pathname = window.location.pathname;
+      
+      // Check for admin route in hash or pathname
+      if (hash === '#/admin' || hash === '#admin' || pathname === '/admin' || pathname.startsWith('/admin')) {
+        setShowAdmin(true);
+      } else {
+        setShowAdmin(false);
+      }
+    };
+
+    // Check on mount
+    checkAdminRoute();
+
+    // Listen for route changes
+    window.addEventListener('popstate', checkAdminRoute);
+    window.addEventListener('hashchange', checkAdminRoute);
+
+    return () => {
+      window.removeEventListener('popstate', checkAdminRoute);
+      window.removeEventListener('hashchange', checkAdminRoute);
+    };
   }, []);
 
   const isHomePage = currentPage === 'Hjem' || currentPage === 'Home';
