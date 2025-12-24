@@ -41,9 +41,13 @@ export function News() {
         
         // Fetch news from API with language filter and published status
         const apiLanguage = language === 'no' ? 'no' : 'en';
-        let apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&language=${apiLanguage}&limit=3&sort=date&order=DESC`;
+        // Add timestamp to prevent caching
+        const timestamp = new Date().getTime();
+        let apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&language=${apiLanguage}&sort=date&order=DESC&_t=${timestamp}`;
         
-        let response = await fetch(apiUrl);
+        let response = await fetch(apiUrl, {
+          cache: 'no-cache'
+        });
 
         if (!response.ok) {
           const errorText = await response.text();
@@ -55,8 +59,11 @@ export function News() {
         
         // If no news found in current language, try without language filter
         if (!data.news || data.news.length === 0) {
-          apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&limit=3&sort=date&order=DESC`;
-          response = await fetch(apiUrl);
+          const timestamp = new Date().getTime();
+          apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&sort=date&order=DESC&_t=${timestamp}`;
+          response = await fetch(apiUrl, {
+            cache: 'no-cache'
+          });
           if (response.ok) {
             data = await response.json();
           }
