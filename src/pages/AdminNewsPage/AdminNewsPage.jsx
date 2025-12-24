@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Plus, Edit, Trash2, Save, X, Eye, EyeOff } from 'lucide-react';
 import styles from './AdminNewsPage.module.css';
 
@@ -27,6 +27,8 @@ export function AdminNewsPage() {
   });
   const [uploadingImage, setUploadingImage] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
+  const contentEditableRef = useRef(null);
+  const descriptionEditableRef = useRef(null);
 
   // Check if user is already logged in
   useEffect(() => {
@@ -43,6 +45,48 @@ export function AdminNewsPage() {
       fetchNews();
     }
   }, [isAuthenticated, token]);
+
+  // Sync contentEditable fields with formData when form is opened or item is edited
+  useEffect(() => {
+    if (showForm) {
+      // Update contentEditable when form opens or when editing an item
+      // Use a small delay to ensure DOM is ready
+      const timer = setTimeout(() => {
+        // Sync content field
+        if (contentEditableRef.current) {
+          const currentContent = contentEditableRef.current.innerHTML.trim();
+          // Remove empty HTML tags to check if there's real content
+          const currentText = contentEditableRef.current.textContent?.trim() || '';
+          const formContent = formData.content || '';
+          // Only update if:
+          // 1. ContentEditable is empty (no text content) AND we have form content, OR
+          // 2. We're editing and the content doesn't match
+          if ((!currentText && formContent) || (editingItem && currentContent !== formContent && formContent)) {
+            contentEditableRef.current.innerHTML = formContent || '';
+          } else if (!formContent && !currentText) {
+            // Both are empty, ensure contentEditable is truly empty
+            contentEditableRef.current.innerHTML = '';
+          }
+        }
+        // Sync description field
+        if (descriptionEditableRef.current) {
+          const currentDescription = descriptionEditableRef.current.innerHTML.trim();
+          const currentText = descriptionEditableRef.current.textContent?.trim() || '';
+          const formDescription = formData.description || '';
+          // Only update if:
+          // 1. ContentEditable is empty (no text content) AND we have form description, OR
+          // 2. We're editing and the description doesn't match
+          if ((!currentText && formDescription) || (editingItem && currentDescription !== formDescription && formDescription)) {
+            descriptionEditableRef.current.innerHTML = formDescription || '';
+          } else if (!formDescription && !currentText) {
+            // Both are empty, ensure contentEditable is truly empty
+            descriptionEditableRef.current.innerHTML = '';
+          }
+        }
+      }, 10);
+      return () => clearTimeout(timer);
+    }
+  }, [showForm, editingItem]);
 
   const verifyToken = async (tokenToVerify) => {
     try {
@@ -135,6 +179,36 @@ export function AdminNewsPage() {
     e.preventDefault();
     try {
       setLoading(true);
+      
+      // Get latest content from contentEditable refs before submitting
+      // This ensures we capture content even if onInput didn't fire
+      let latestContent = formData.content || '';
+      let latestDescription = formData.description || '';
+      
+      if (contentEditableRef.current) {
+        let contentHtml = contentEditableRef.current.innerHTML.trim();
+        // Remove empty HTML tags like <br>, <div><br></div>, <p><br></p>, etc.
+        // Check if content is actually meaningful (not just empty tags)
+        const textContent = contentEditableRef.current.textContent?.trim() || '';
+        if (textContent) {
+          latestContent = contentHtml;
+        } else {
+          // If no text content, set to empty string (will be converted to null)
+          latestContent = '';
+        }
+      }
+      
+      if (descriptionEditableRef.current) {
+        let descriptionHtml = descriptionEditableRef.current.innerHTML.trim();
+        // Remove empty HTML tags
+        const textContent = descriptionEditableRef.current.textContent?.trim() || '';
+        if (textContent) {
+          latestDescription = descriptionHtml;
+        } else {
+          latestDescription = '';
+        }
+      }
+      
       const url = editingItem 
         ? `${API_BASE_URL}/api/news/${editingItem.id}`
         : `${API_BASE_URL}/api/news`;
@@ -148,14 +222,20 @@ export function AdminNewsPage() {
         date: formData.date ? (formData.date.includes('T') ? formData.date : `${formData.date}T00:00:00.000Z`) : new Date().toISOString(),
         status: formData.status,
         language: formData.language,
-        // Remove empty strings and convert to null
-        description: formData.description || null,
-        content: formData.content || null,
+        // Use latest content from refs, fallback to formData, or null if empty
+        description: latestDescription || null,
+        // Always include content - use latestContent if it has text, otherwise keep existing content if editing
+        content: latestContent || (editingItem && editingItem.content ? editingItem.content : null),
         // Only include image_key if image_url is not set
         image_key: formData.image_url ? null : (formData.image_key || null),
         image_url: formData.image_url || null,
         link: formData.link || null
       };
+      
+      // If editing and contentEditable is empty but we have existing content, preserve it
+      if (editingItem && !latestContent && editingItem.content) {
+        submitData.content = editingItem.content;
+      }
 
       // Remove undefined values
       Object.keys(submitData).forEach(key => {
@@ -163,12 +243,6 @@ export function AdminNewsPage() {
           delete submitData[key];
         }
       });
-
-      console.log('Submitting news data:', submitData);
-
-      console.log('Submitting to:', url);
-      console.log('Method:', method);
-      console.log('Submit data:', submitData);
 
       const response = await fetch(url, {
         method,
@@ -179,12 +253,8 @@ export function AdminNewsPage() {
         body: JSON.stringify(submitData)
       });
 
-      console.log('Response status:', response.status);
-      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
-
       let data;
       const responseText = await response.text();
-      console.log('Response text:', responseText);
       
       try {
         data = JSON.parse(responseText);
@@ -368,6 +438,13 @@ export function AdminNewsPage() {
     setEditingItem(null);
     setImagePreview(null);
     setShowForm(false);
+    // Clear contentEditable fields
+    if (contentEditableRef.current) {
+      contentEditableRef.current.innerHTML = '';
+    }
+    if (descriptionEditableRef.current) {
+      descriptionEditableRef.current.innerHTML = '';
+    }
   };
 
   if (!isAuthenticated) {
@@ -472,21 +549,281 @@ export function AdminNewsPage() {
             </div>
 
             <div className={styles.formGroup}>
-              <label>Description</label>
-              <textarea
-                value={formData.description}
-                onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                rows="3"
-              />
+              <label>Description (HTML supported)</label>
+              <div className={styles.richTextEditor}>
+                <div className={styles.richTextToolbar}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('bold', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Bold"
+                  >
+                    <strong>B</strong>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('italic', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Italic"
+                  >
+                    <em>I</em>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('underline', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Underline"
+                  >
+                    <u>U</u>
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('formatBlock', false, '<h2>');
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Heading"
+                  >
+                    H2
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('formatBlock', false, '<p>');
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Paragraph"
+                  >
+                    P
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('insertUnorderedList', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Bullet List"
+                  >
+                    •
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        document.execCommand('insertOrderedList', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Numbered List"
+                  >
+                    1.
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (descriptionEditableRef.current) {
+                        descriptionEditableRef.current.focus();
+                        const url = prompt('Enter URL:');
+                        if (url) {
+                          document.execCommand('createLink', false, url);
+                        }
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Insert Link"
+                  >
+                    🔗
+                  </button>
+                </div>
+                <div
+                  ref={descriptionEditableRef}
+                  contentEditable
+                  className={styles.richTextContent}
+                  onInput={(e) => {
+                    const html = e.target.innerHTML.trim();
+                    // Only update if not empty or if it's different from current value
+                    if (html || html !== formData.description) {
+                      setFormData({ ...formData, description: html || '' });
+                    }
+                  }}
+                  onBlur={(e) => {
+                    // Also update on blur to ensure we capture the final state
+                    const html = e.target.innerHTML.trim();
+                    setFormData(prev => ({ ...prev, description: html || '' }));
+                  }}
+                  suppressContentEditableWarning={true}
+                />
+              </div>
+              <p className={styles.richTextHint}>
+                Use the toolbar above to format your description, or type HTML directly. The description supports HTML tags.
+              </p>
             </div>
 
             <div className={styles.formGroup}>
-              <label>Content (optional)</label>
-              <textarea
-                value={formData.content}
-                onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                rows="5"
-              />
+              <label>Content (optional - HTML supported)</label>
+              <div className={styles.richTextEditor}>
+                <div className={styles.richTextToolbar}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('bold', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Bold"
+                  >
+                    <strong>B</strong>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('italic', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Italic"
+                  >
+                    <em>I</em>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('underline', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Underline"
+                  >
+                    <u>U</u>
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('formatBlock', false, '<h2>');
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Heading"
+                  >
+                    H2
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('formatBlock', false, '<p>');
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Paragraph"
+                  >
+                    P
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('insertUnorderedList', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Bullet List"
+                  >
+                    •
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        document.execCommand('insertOrderedList', false, null);
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Numbered List"
+                  >
+                    1.
+                  </button>
+                  <div className={styles.toolbarSeparator}></div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (contentEditableRef.current) {
+                        contentEditableRef.current.focus();
+                        const url = prompt('Enter URL:');
+                        if (url) {
+                          document.execCommand('createLink', false, url);
+                        }
+                      }
+                    }}
+                    className={styles.toolbarButton}
+                    title="Insert Link"
+                  >
+                    🔗
+                  </button>
+                </div>
+                <div
+                  ref={contentEditableRef}
+                  contentEditable
+                  className={styles.richTextContent}
+                  onInput={(e) => {
+                    const html = e.target.innerHTML.trim();
+                    // Only update if not empty or if it's different from current value
+                    if (html || html !== formData.content) {
+                      setFormData({ ...formData, content: html || '' });
+                    }
+                  }}
+                  onBlur={(e) => {
+                    // Also update on blur to ensure we capture the final state
+                    const html = e.target.innerHTML.trim();
+                    setFormData(prev => ({ ...prev, content: html || '' }));
+                  }}
+                  suppressContentEditableWarning={true}
+                />
+              </div>
+              <p className={styles.richTextHint}>
+                Use the toolbar above to format your content, or type HTML directly. The content supports HTML tags.
+              </p>
             </div>
 
             <div className={styles.formGroup}>

@@ -40,9 +40,6 @@ export function News() {
         const apiLanguage = language === 'no' ? 'no' : 'en';
         let apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&language=${apiLanguage}&limit=3&sort=date&order=DESC`;
         
-        console.log('Fetching news from:', apiUrl);
-        console.log('API_BASE_URL:', API_BASE_URL);
-        
         let response = await fetch(apiUrl);
 
         if (!response.ok) {
@@ -52,16 +49,13 @@ export function News() {
         }
 
         let data = await response.json();
-        console.log('News API Response:', data);
         
         // If no news found in current language, try without language filter
         if (!data.news || data.news.length === 0) {
-          console.log('No news in current language, trying without language filter...');
           apiUrl = `${API_BASE_URL}/api/news?status=PUBLISHED&limit=3&sort=date&order=DESC`;
           response = await fetch(apiUrl);
           if (response.ok) {
             data = await response.json();
-            console.log('News API Response (no language filter):', data);
           }
         }
         
@@ -168,9 +162,23 @@ export function News() {
                     <time className={styles.newsDate}>{formatDate(item.date)}</time>
                   )}
                   <h3 className={styles.newsCardTitle}>{item.title}</h3>
-                  <p className={styles.newsDescription}>
-                    {item.description}
-                  </p>
+                  {item.description && item.description.trim() && (
+                    <div 
+                      className={styles.newsDescription}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                  )}
+                  {item.content && item.content.trim() && (
+                    <div 
+                      className={styles.newsContentBody}
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    />
+                  )}
+                  {(!item.description || !item.description.trim()) && (!item.content || !item.content.trim()) && (
+                    <p className={styles.newsDescription} style={{ fontStyle: 'italic', color: '#999' }}>
+                      No description or content available.
+                    </p>
+                  )}
                   {item.link && (
                     <a href={item.link} className={styles.newsLink}>
                       {t.news.readMore}
