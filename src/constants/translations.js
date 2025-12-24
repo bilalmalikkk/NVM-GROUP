@@ -14,6 +14,7 @@ export const translations = {
       bottomMenu: [
         { label: 'Hjem', href: '#hero' },
         { label: 'prosjekt', href: '#about' },
+        { label: 'Velferds teknologi', externalUrl: 'https://nordicmedtek.no' },
         { label: 'automotive', href: '#business' },
         { label: 'Plast & Mekanikk', href: '#plastic' },
         { label: 'Kabel konfeksjon', href: '#cable' },
@@ -970,6 +971,7 @@ export const translations = {
       bottomMenu: [
         { label: 'Home', href: '#hero' },
         { label: 'project', href: '#about' },
+        { label: 'Welfare technology', externalUrl: 'https://nordicmedtek.no' },
         { label: 'Automotive', href: '#business' },
         { label: 'Plastic & Mechanics', href: '#plastic' },
         { label: 'Cable assembly', href: '#cable' },
