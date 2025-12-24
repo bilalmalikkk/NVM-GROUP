@@ -30,7 +30,6 @@ export function News() {
   const [newsItems, setNewsItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isPaused, setIsPaused] = useState(false);
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
@@ -125,8 +124,6 @@ export function News() {
     return null;
   };
 
-  // Duplicate news items for seamless loop
-  const duplicatedNewsItems = newsItems.length > 0 ? [...newsItems, ...newsItems] : [];
 
   const handlePrev = () => {
     if (scrollContainerRef.current) {
@@ -161,46 +158,6 @@ export function News() {
     }
   };
 
-  // Rotating animation effect
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container || isPaused || newsItems.length === 0) return;
-
-    let animationId;
-    let startTime = null;
-    const scrollSpeed = 0.5; // pixels per frame
-
-    const animate = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      
-      if (!isPaused) {
-        container.scrollLeft += scrollSpeed;
-        
-        // Reset scroll position when reaching the end for seamless loop
-        if (container.scrollLeft >= container.scrollWidth / 2) {
-          container.scrollLeft = 0;
-        }
-      }
-      
-      animationId = requestAnimationFrame(animate);
-    };
-
-    animationId = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, [isPaused, newsItems.length]);
-
-  const handleMouseEnter = () => {
-    setIsPaused(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsPaused(false);
-  };
 
   return (
     <section ref={ref} className={`${styles.newsSection} ${isVisible ? styles.visible : ''}`}>
@@ -232,22 +189,22 @@ export function News() {
       {!loading && !error && newsItems.length > 0 && (
         <div 
           className={styles.carouselWrapper}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
-          <button
-            className={styles.carouselButton}
-            onClick={handlePrev}
-            aria-label="Previous news"
-          >
-            <ChevronLeft size={20} />
-          </button>
+          {newsItems.length > 3 && (
+            <button
+              className={styles.carouselButton}
+              onClick={handlePrev}
+              aria-label="Previous news"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
           <div className={styles.carouselContainer} ref={scrollContainerRef}>
             <div className={styles.newsGrid}>
-              {duplicatedNewsItems.map((item, index) => {
+              {newsItems.map((item) => {
                 const imageSrc = getImageSrc(item);
                 return (
-                  <article key={`${item.id}-${index}`} className={styles.newsCard}>
+                  <article key={item.id} className={styles.newsCard}>
                     {imageSrc && (
                       <div className={styles.newsImageWrapper}>
                         <img
@@ -290,13 +247,15 @@ export function News() {
               })}
             </div>
           </div>
-          <button
-            className={styles.carouselButton}
-            onClick={handleNext}
-            aria-label="Next news"
-          >
-            <ChevronRight size={20} />
-          </button>
+          {newsItems.length > 3 && (
+            <button
+              className={styles.carouselButton}
+              onClick={handleNext}
+              aria-label="Next news"
+            >
+              <ChevronRight size={20} />
+            </button>
+          )}
         </div>
       )}
     </section>

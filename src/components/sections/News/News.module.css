@@ -1,9 +1,10 @@
 .newsSection {
   background-color: #ffffff;
-  padding: 80px 80px;
+  padding: 80px 40px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  overflow-x: visible;
 }
 
 .newsSection.visible {
@@ -31,22 +32,24 @@
 
 .carouselWrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .carouselContainer {
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 20px 0;
   flex: 1;
+  min-width: 0;
 }
 
 .carouselContainer::-webkit-scrollbar {
@@ -56,7 +59,7 @@
 .newsGrid {
   display: flex;
   gap: 32px;
-  padding: 0 20px;
+  padding: 0;
   width: max-content;
 }
 
