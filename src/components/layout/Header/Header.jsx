@@ -17,7 +17,6 @@ export function Header({ currentPage, setCurrentPage }) {
       ? {
           'Hjem': 'Home',
           'prosjekt': 'project',
-          'Velferds teknologi': 'Welfare technology',
           'automotive': 'Automotive',
           'Plast & Mekanikk': 'Plastic & Mechanics',
           'Kabel konfeksjon': 'Cable assembly',
@@ -26,7 +25,6 @@ export function Header({ currentPage, setCurrentPage }) {
       : {
           'Home': 'Hjem',
           'project': 'prosjekt',
-          'Welfare technology': 'Velferds teknologi',
           'Automotive': 'automotive',
           'Plastic & Mechanics': 'Plast & Mekanikk',
           'Cable assembly': 'Kabel konfeksjon',
