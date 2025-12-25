@@ -5,6 +5,7 @@
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   overflow-x: visible;
+  width: 100%;
 }
 
 .newsSection.visible {
@@ -36,9 +37,9 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .carouselContainer {
@@ -50,6 +51,7 @@
   padding: 20px 0;
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .carouselContainer::-webkit-scrollbar {
@@ -64,7 +66,7 @@
 }
 
 .newsCard {
-  flex: 0 0 400px;
+  flex: 0 0 380px;
   background-color: #fafafa;
   border-radius: 12px;
   overflow: hidden;
@@ -255,6 +257,19 @@
 
 .carouselButton:active {
   transform: scale(0.95);
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  .newsSection {
+    padding: 80px 60px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .newsSection {
+    padding: 80px 80px;
+  }
 }
 
 /* Responsive */
