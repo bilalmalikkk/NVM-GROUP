@@ -54,6 +54,11 @@
   width: 100%;
 }
 
+.carouselContainer.centered {
+  display: flex;
+  justify-content: center;
+}
+
 .carouselContainer::-webkit-scrollbar {
   display: none;
 }

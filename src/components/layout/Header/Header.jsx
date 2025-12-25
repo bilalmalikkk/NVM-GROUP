@@ -90,16 +90,16 @@ export function Header({ currentPage, setCurrentPage }) {
                   {item.label}
                 </a>
               ) : (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentPage(item.label);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={currentPage === item.label ? styles.active : ''}
-                >
-                  {item.label}
-                </button>
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentPage(item.label);
+                  setMobileMenuOpen(false);
+                }}
+                className={currentPage === item.label ? styles.active : ''}
+              >
+                {item.label}
+              </button>
               )
             ))}
           </div>
@@ -124,16 +124,16 @@ export function Header({ currentPage, setCurrentPage }) {
                   {item.label}
                 </a>
               ) : (
-                <button
-                  key={`bottom-${index}`}
-                  onClick={() => {
-                    setCurrentPage(item.label);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`${styles.mobileMenuItem} ${currentPage === item.label ? styles.active : ''}`}
-                >
-                  {item.label}
-                </button>
+              <button
+                key={`bottom-${index}`}
+                onClick={() => {
+                  setCurrentPage(item.label);
+                  setMobileMenuOpen(false);
+                }}
+                className={`${styles.mobileMenuItem} ${currentPage === item.label ? styles.active : ''}`}
+              >
+                {item.label}
+              </button>
               )
             ))}
             <div className={styles.mobileMenuDivider}></div>

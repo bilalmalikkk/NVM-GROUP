@@ -199,52 +199,52 @@ export function News() {
               <ChevronLeft size={20} />
             </button>
           )}
-          <div className={styles.carouselContainer} ref={scrollContainerRef}>
-            <div className={styles.newsGrid}>
-              {newsItems.map((item) => {
-                const imageSrc = getImageSrc(item);
-                return (
-                  <article key={item.id} className={styles.newsCard}>
-                    {imageSrc && (
-                      <div className={styles.newsImageWrapper}>
-                        <img
-                          src={imageSrc}
-                          alt={item.image_key || item.title}
-                          className={styles.newsImage}
-                        />
-                      </div>
-                    )}
-                    <div className={styles.newsContent}>
-                      {item.date && (
-                        <time className={styles.newsDate}>{formatDate(item.date)}</time>
-                      )}
-                      <h3 className={styles.newsCardTitle}>{item.title}</h3>
-                      {item.description && item.description.trim() && (
-                        <div 
-                          className={styles.newsDescription}
-                          dangerouslySetInnerHTML={{ __html: item.description }}
-                        />
-                      )}
-                      {item.content && item.content.trim() && (
-                        <div 
-                          className={styles.newsContentBody}
-                          dangerouslySetInnerHTML={{ __html: item.content }}
-                        />
-                      )}
-                      {(!item.description || !item.description.trim()) && (!item.content || !item.content.trim()) && (
-                        <p className={styles.newsDescription} style={{ fontStyle: 'italic', color: '#999' }}>
-                          No description or content available.
-                        </p>
-                      )}
-                      {item.link && (
-                        <a href={item.link} className={styles.newsLink}>
-                          {t.news.readMore}
-                        </a>
-                      )}
-                    </div>
-                  </article>
-                );
-              })}
+          <div className={`${styles.carouselContainer} ${newsItems.length <= 3 ? styles.centered : ''}`} ref={scrollContainerRef}>
+        <div className={styles.newsGrid}>
+          {newsItems.map((item) => {
+            const imageSrc = getImageSrc(item);
+            return (
+              <article key={item.id} className={styles.newsCard}>
+                {imageSrc && (
+                  <div className={styles.newsImageWrapper}>
+                    <img
+                      src={imageSrc}
+                      alt={item.image_key || item.title}
+                      className={styles.newsImage}
+                    />
+                  </div>
+                )}
+                <div className={styles.newsContent}>
+                  {item.date && (
+                    <time className={styles.newsDate}>{formatDate(item.date)}</time>
+                  )}
+                  <h3 className={styles.newsCardTitle}>{item.title}</h3>
+                  {item.description && item.description.trim() && (
+                    <div 
+                      className={styles.newsDescription}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                  )}
+                  {item.content && item.content.trim() && (
+                    <div 
+                      className={styles.newsContentBody}
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    />
+                  )}
+                  {(!item.description || !item.description.trim()) && (!item.content || !item.content.trim()) && (
+                    <p className={styles.newsDescription} style={{ fontStyle: 'italic', color: '#999' }}>
+                      No description or content available.
+                    </p>
+                  )}
+                  {item.link && (
+                    <a href={item.link} className={styles.newsLink}>
+                      {t.news.readMore}
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })}
             </div>
           </div>
           {newsItems.length > 3 && (
