@@ -243,6 +243,16 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .contactSection {
+    padding: 60px 40px;
+  }
+
+  .contactContainer {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .contactSection {
     padding: 60px 40px;
@@ -256,6 +266,10 @@
   .contactMainTitle {
     font-size: 32px;
   }
+
+  .contactHeader {
+    margin-bottom: 48px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -264,20 +278,54 @@
   }
 
   .contactMainTitle {
-    font-size: 28px;
+    font-size: 26px;
+    margin-bottom: 12px;
   }
 
   .contactSubtitle {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .contactHeader {
+    margin-bottom: 32px;
   }
 
   .contactFormCard {
-    padding: 32px 24px;
+    padding: 24px 20px;
   }
 
   .formTitle {
     font-size: 20px;
     margin-bottom: 24px;
+  }
+
+  .formInput,
+  .formTextarea {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .formTextarea {
+    min-height: 100px;
+  }
+
+  .btnSend,
+  .btnBook {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .contactDetails {
+    gap: 20px;
+  }
+
+  .detailContent p {
+    font-size: 15px;
+  }
+
+  .contactNote {
+    font-size: 13px;
+    padding: 20px;
   }
 }
 

@@ -174,14 +174,33 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .referencesSection {
     padding: 60px 40px;
   }
 
   .projectsGrid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .referencesSection {
+    padding: 60px 40px;
+  }
+
+  .referencesHeader {
+    margin-bottom: 48px;
+  }
+
+  .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+
+  .projectCardTop {
+    height: 180px;
+    padding: 32px;
   }
 }
 
@@ -191,20 +210,26 @@
   }
 
   .referencesTitle {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .referencesSubtitle {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .referencesHeader {
+    margin-bottom: 32px;
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .projectCardTop {
     height: 160px;
+    padding: 24px;
   }
 
   .projectIcon {
@@ -213,7 +238,26 @@
   }
 
   .projectCardBottom {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .projectTitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .projectDescription {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .viewMoreContainer {
+    margin-top: 32px;
+  }
+
+  .viewMoreBtn {
+    padding: 14px 32px;
+    font-size: 15px;
   }
 }
 

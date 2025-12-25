@@ -7,28 +7,38 @@ import styles from './ProductReferences.module.css';
 
 // Import product images
 import camX2Image from '../../../assets/Cam-X2.jpeg';
-import healthMonitorImage from '../../../assets/HealthMonitor Pro.jpeg';
+import healthMonitorImage from '../../../assets/analogScreen.png';
 import smartHubImage from '../../../assets/SmartHub IoT.jpeg';
 import rvControlImage from '../../../assets/polar_screen.jpg';
 import tempSenseImage from '../../../assets/io_box_1.avif';
 import powerControlImage from '../../../assets/PowerControlMC.jpeg';
-import airQualityImage from '../../../assets/AirQuality-Pro.jpeg';
-import smartLockImage from '../../../assets/SmartLock.jpeg';
+import mobileAppImage from '../../../assets/processed-file-1761638936492-650159908.png';
+import airQualityImage from '../../../assets/processed-file-1762595898165-411757193.jpg';
+import smartLockImage from '../../../assets/processed-file-1761299724628-718362341.jpg';
 import vibrationMonitorImage from '../../../assets/VibrationMonitor.jpeg';
 import powerMeterImage from '../../../assets/PowerMeter.jpeg';
+import vaktrommetImage from '../../../assets/processed-file-1761298836713-939324797.png';
 
 // Map product titles to images
 const productImageMap = {
   'Cam-X2': camX2Image,
-  'HealthMonitor Pro': healthMonitorImage,
+  'Enkel Smart Klokke': healthMonitorImage,
+  'Simple Smart Watch': healthMonitorImage,
+  'CoreHub+': smartHubImage,
   'SmartHub IoT': smartHubImage,
   'RV-Control 500': rvControlImage,
   'CAN NODE': tempSenseImage,
+  'Mobil App': mobileAppImage,
+  'Mobile App': mobileAppImage,
   'PowerControl MC': powerControlImage,
   'AirQuality-Pro': airQualityImage,
+  'Alarm Knapp (4G)': smartLockImage,
+  'Alarm Button (4G)': smartLockImage,
   'SmartLock-Z3': smartLockImage,
   'VibrationMonitor-I': vibrationMonitorImage,
   'PowerMeter-3P': powerMeterImage,
+  'Vaktrommet – Trygghet i sanntid': vaktrommetImage,
+  'Vaktrommet – Safety in real-time': vaktrommetImage,
 };
 
 export function ProductReferences() {

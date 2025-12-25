@@ -80,6 +80,16 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .businessAreasSection {
+    padding: 80px 40px;
+  }
+
+  .businessAreasGrid {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .businessAreasSection {
     padding: 60px 40px;
@@ -88,6 +98,11 @@
   .businessAreasGrid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .businessAreasTitle {
+    font-size: 26px;
+    margin-bottom: 48px;
   }
 }
 
@@ -98,8 +113,20 @@
 
   .businessAreasTitle {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
+  .businessAreaTitle {
+    font-size: 18px;
+  }
+
+  .businessAreaDescription {
+    font-size: 15px;
+  }
+
+  .iconCircle {
+    width: 80px;
+    height: 80px;
+  }
 }
 

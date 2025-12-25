@@ -91,6 +91,16 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .whyChooseSection {
+    padding: 60px 40px;
+  }
+
+  .whyChooseGrid {
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .whyChooseSection {
     padding: 60px 40px;
@@ -100,6 +110,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
+  .whyChooseTitle {
+    font-size: 28px;
+  }
+
+  .whyChooseHeader {
+    margin-bottom: 48px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -108,30 +126,45 @@
   }
 
   .whyChooseTitle {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 12px;
   }
 
   .whyChooseSubtitle {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .whyChooseGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .whyChooseHeader {
+    margin-bottom: 32px;
   }
 
   .featureCard {
-    padding: 24px;
+    padding: 20px;
   }
 
   .featureIconBox {
     width: 56px;
     height: 56px;
+    margin-bottom: 20px;
   }
 
   .featureIcon {
     width: 28px;
     height: 28px;
+  }
+
+  .featureTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .featureDescription {
+    font-size: 15px;
   }
 }
 
