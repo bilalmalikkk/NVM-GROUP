@@ -9,8 +9,8 @@ import styles from './ProductReferences.module.css';
 import camX2Image from '../../../assets/Cam-X2.jpeg';
 import healthMonitorImage from '../../../assets/HealthMonitor Pro.jpeg';
 import smartHubImage from '../../../assets/SmartHub IoT.jpeg';
-import rvControlImage from '../../../assets/RV-Control.jpeg';
-import tempSenseImage from '../../../assets/TempSense.jpeg';
+import rvControlImage from '../../../assets/polar_screen.jpg';
+import tempSenseImage from '../../../assets/io_box_1.avif';
 import powerControlImage from '../../../assets/PowerControlMC.jpeg';
 import airQualityImage from '../../../assets/AirQuality-Pro.jpeg';
 import smartLockImage from '../../../assets/SmartLock.jpeg';
@@ -23,7 +23,7 @@ const productImageMap = {
   'HealthMonitor Pro': healthMonitorImage,
   'SmartHub IoT': smartHubImage,
   'RV-Control 500': rvControlImage,
-  'TempSense-X': tempSenseImage,
+  'CAN NODE': tempSenseImage,
   'PowerControl MC': powerControlImage,
   'AirQuality-Pro': airQualityImage,
   'SmartLock-Z3': smartLockImage,
@@ -61,10 +61,6 @@ export function ProductReferences() {
                   <p className={styles.productFeature}>{product.feature}</p>
                 </div>
                 <p className={styles.productDescription}>{product.description}</p>
-                <button className={styles.productButton}>
-                  <ExternalLink size={18} />
-                  {t.productReferences.buttonText}
-                </button>
               </div>
             </div>
           ))}
