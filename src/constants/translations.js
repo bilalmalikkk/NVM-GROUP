@@ -832,13 +832,13 @@ export const translations = {
     },
     // Automotive Content
     automotiveContent: {
-      heading: 'PROJECT-BASED B2B SERVICE',
+      heading: 'PROSJEKT-BASERT B2B TJENESTE',
       paragraphs: [
-        'After developing industrial control systems and automotive control nodes over CAN since the early 90s, and supplementing with smart home solutions in recent years, we entered the RV and caravan industry in 2018.',
-        'We have developed a modern and scalable system ready to adapt to rapid market changes. The system handles all functions – from turning on lights and playing music, to flushing the toilet and heating the floor.',
-        'Our experience from industrial automation combined with modern IoT technology gives us a unique competitive advantage in delivering reliable and innovative solutions.',
+        'Etter å ha utviklet industrielle styringssystemer og automotive kontrollnoder over CAN siden tidlig på 90-tallet, og supplert med smarte hjemløsninger de siste årene, gikk vi inn i RV- og campingvognindustrien i 2018.',
+        'Vi har utviklet et moderne og skalerbart system klart til å tilpasse seg raske markedendringer. Systemet håndterer alle funksjoner – fra å slå på lys og spille musikk, til å tømme toalettet og varme opp gulvet.',
+        'Vår erfaring fra industriel automatisering kombinert med moderne IoT-teknologi gir oss en unik konkurransefortrinn i å levere pålitelige og innovative løsninger.',
       ],
-      imageAlt: 'Modern RV with custom control system',
+      imageAlt: 'Moderne campingvogn med tilpasset styringssystem',
     },
     // Automotive Partners
     automotivePartners: {
