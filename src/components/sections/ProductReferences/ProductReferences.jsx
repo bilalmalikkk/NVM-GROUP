@@ -6,9 +6,10 @@ import { ExternalLink } from 'lucide-react';
 import styles from './ProductReferences.module.css';
 
 // Import product images
-import camX2Image from '../../../assets/Cam-X2.jpeg';
+import camX2Image from '../../../assets/processed-file-1761299462516-596848665.png';
 import healthMonitorImage from '../../../assets/analogScreen.png';
 import smartHubImage from '../../../assets/SmartHub IoT.jpeg';
+import coreHubImage from '../../../assets/processed-file-1761298871370-131557591.png';
 import rvControlImage from '../../../assets/polar_screen.jpg';
 import tempSenseImage from '../../../assets/io_box_1.avif';
 import powerControlImage from '../../../assets/PowerControlMC.jpeg';
@@ -24,13 +25,15 @@ const productImageMap = {
   'Cam-X2': camX2Image,
   'Enkel Smart Klokke': healthMonitorImage,
   'Simple Smart Watch': healthMonitorImage,
-  'CoreHub+': smartHubImage,
+  'CoreHub+': coreHubImage,
   'SmartHub IoT': smartHubImage,
   'RV-Control 500': rvControlImage,
   'CAN NODE': tempSenseImage,
   'Mobil App': mobileAppImage,
   'Mobile App': mobileAppImage,
   'PowerControl MC': powerControlImage,
+  'easeBlink Privat': airQualityImage,
+  'easeBlink Private': airQualityImage,
   'AirQuality-Pro': airQualityImage,
   'Alarm Knapp (4G)': smartLockImage,
   'Alarm Button (4G)': smartLockImage,
