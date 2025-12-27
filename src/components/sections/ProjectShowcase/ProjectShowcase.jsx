@@ -11,10 +11,20 @@ const iconMap = {
   Cpu,
 };
 
-export function ProjectShowcase() {
+export function ProjectShowcase({ setCurrentPage }) {
   const { language } = useLanguage();
   const t = getTranslations(language);
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
+
+  const handleViewMoreClick = () => {
+    // Set flag to scroll to product references section
+    sessionStorage.setItem('scrollToProductReferences', 'true');
+    // Navigate to projects page
+    const projectPageName = language === 'no' ? 'prosjekt' : 'project';
+    if (setCurrentPage) {
+      setCurrentPage(projectPageName);
+    }
+  };
 
   return (
     <section ref={ref} className={`${styles.referencesSection} ${isVisible ? styles.visible : ''}`}>
@@ -45,7 +55,7 @@ export function ProjectShowcase() {
         })}
       </div>
       <div className={styles.viewMoreContainer}>
-        <button className={styles.viewMoreBtn}>
+        <button className={styles.viewMoreBtn} onClick={handleViewMoreClick}>
           {t.projectShowcase.viewMore} <ArrowRight size={20} className={styles.arrow} />
         </button>
       </div>

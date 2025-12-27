@@ -60,7 +60,7 @@ function App() {
           setCurrentPage={setCurrentPage}
         />
         {isHomePage ? (
-          <HomePage />
+          <HomePage setCurrentPage={setCurrentPage} />
         ) : isProjectPage ? (
           <ProjectPage />
         ) : isAutomotivePage ? (

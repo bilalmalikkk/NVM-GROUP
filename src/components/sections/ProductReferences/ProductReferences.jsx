@@ -50,7 +50,7 @@ export function ProductReferences() {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className={`${styles.productReferencesSection} ${isVisible ? styles.visible : ''}`}>
+    <section id="product-references" ref={ref} className={`${styles.productReferencesSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.productReferencesContainer}>
         <div className={styles.productReferencesHeader}>
           <h2 className={styles.productReferencesTitle}>{t.productReferences.title}</h2>

@@ -8,7 +8,7 @@ import { ProjectShowcase } from '../../sections/ProjectShowcase/ProjectShowcase'
 import { ContactCTA } from '../../sections/ContactCTA/ContactCTA';
 import { ScrollToTop } from '../../common/ScrollToTop/ScrollToTop';
 
-export function HomePage() {
+export function HomePage({ setCurrentPage }) {
   return (
     <div>
       <Hero />
@@ -16,7 +16,7 @@ export function HomePage() {
       <BusinessAreas />
       <WhyChooseUs />
       <News />
-      <ProjectShowcase />
+      <ProjectShowcase setCurrentPage={setCurrentPage} />
       <ContactCTA />
       <ScrollToTop />
     </div>
