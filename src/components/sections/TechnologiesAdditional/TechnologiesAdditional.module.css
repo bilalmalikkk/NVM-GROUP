@@ -128,12 +128,44 @@
     padding: 40px 20px 60px;
   }
 
+  .technologiesAdditionalGrid {
+    gap: 40px;
+  }
+
+  .technologyAdditionalCategory {
+    padding: 20px;
+  }
+
+  .categoryAdditionalHeader {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
   .categoryAdditionalTitle {
     font-size: 18px;
   }
 
+  .technologyAdditionalList {
+    gap: 10px;
+  }
+
   .technologyAdditionalItem {
     font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .technologiesAdditionalSection {
+    padding: 32px 16px 50px;
+  }
+
+  .categoryAdditionalTitle {
+    font-size: 17px;
+  }
+
+  .technologyAdditionalItem {
+    font-size: 13px;
   }
 }
 

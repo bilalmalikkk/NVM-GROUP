@@ -165,19 +165,62 @@
 
   .technologiesTitle {
     font-size: 24px;
+    margin-bottom: 16px;
   }
 
   .technologiesIntro {
     font-size: 15px;
     margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .technologiesGrid {
+    gap: 40px;
+  }
+
+  .technologyCategory {
+    padding: 20px;
+  }
+
+  .categoryHeader {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
   }
 
   .categoryTitle {
     font-size: 18px;
   }
 
+  .technologyList {
+    gap: 10px;
+  }
+
   .technologyItem {
     font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .technologiesSection {
+    padding: 50px 16px;
+  }
+
+  .technologiesTitle {
+    font-size: 22px;
+  }
+
+  .technologiesIntro {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .categoryTitle {
+    font-size: 17px;
+  }
+
+  .technologyItem {
+    font-size: 13px;
   }
 }
 

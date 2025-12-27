@@ -137,6 +137,10 @@
     margin-bottom: 40px;
   }
 
+  .processSteps {
+    gap: 40px;
+  }
+
   .stepNumber {
     width: 50px;
     height: 50px;
@@ -151,6 +155,36 @@
 
   .stepDescription {
     font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .processFlowSection {
+    padding: 50px 16px;
+  }
+
+  .processFlowTitle {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
+
+  .processSteps {
+    gap: 32px;
+  }
+
+  .stepNumber {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .stepTitle {
+    font-size: 16px;
+  }
+
+  .stepDescription {
+    font-size: 13px;
   }
 }
 

@@ -183,16 +183,51 @@
 @media (max-width: 480px) {
   .projectHeroSection {
     padding: 60px 20px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .heroContent {
+    max-width: 100%;
   }
 
   .heroHeading {
     font-size: 28px;
     margin-bottom: 20px;
+    letter-spacing: 0.5px;
   }
 
   .heroDescription {
     font-size: 15px;
     margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .heroButtons {
+    gap: 16px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 32px;
+    min-height: 44px; /* Better touch target */
+  }
+}
+
+@media (max-width: 375px) {
+  .projectHeroSection {
+    padding: 50px 16px;
+  }
+
+  .heroHeading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .heroDescription {
+    font-size: 14px;
+    margin-bottom: 28px;
   }
 }
 

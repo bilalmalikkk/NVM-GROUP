@@ -128,12 +128,44 @@
     padding: 40px 20px 60px;
   }
 
+  .technologiesDetailGrid {
+    gap: 40px;
+  }
+
+  .technologyDetailCategory {
+    padding: 20px;
+  }
+
+  .categoryDetailHeader {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
   .categoryDetailTitle {
     font-size: 18px;
   }
 
+  .technologyDetailList {
+    gap: 10px;
+  }
+
   .technologyDetailItem {
     font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .technologiesDetailSection {
+    padding: 32px 16px 50px;
+  }
+
+  .categoryDetailTitle {
+    font-size: 17px;
+  }
+
+  .technologyDetailItem {
+    font-size: 13px;
   }
 }
 
