@@ -48,23 +48,58 @@ export function ProductReferences() {
   const { language } = useLanguage();
   const t = getTranslations(language);
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [imageErrors, setImageErrors] = React.useState({});
+  const [forceVisible, setForceVisible] = React.useState(false);
+
+  // Fallback: ensure section is visible after a delay if animation doesn't trigger
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isVisible) {
+        setForceVisible(true);
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [isVisible]);
+
+  const handleImageError = (productTitle) => {
+    setImageErrors(prev => ({ ...prev, [productTitle]: true }));
+  };
+
+  const shouldBeVisible = isVisible || forceVisible;
+  const products = t.productReferences?.products || [];
+
+  if (!products || products.length === 0) {
+    return null;
+  }
 
   return (
-    <section id="product-references" ref={ref} className={`${styles.productReferencesSection} ${isVisible ? styles.visible : ''}`}>
+    <section id="product-references" ref={ref} className={`${styles.productReferencesSection} ${shouldBeVisible ? styles.visible : ''}`}>
       <div className={styles.productReferencesContainer}>
         <div className={styles.productReferencesHeader}>
-          <h2 className={styles.productReferencesTitle}>{t.productReferences.title}</h2>
-          <p className={styles.productReferencesSubtitle}>{t.productReferences.subtitle}</p>
+          <h2 className={styles.productReferencesTitle}>{t.productReferences?.title || 'Product References'}</h2>
+          <p className={styles.productReferencesSubtitle}>{t.productReferences?.subtitle || ''}</p>
         </div>
         <div className={styles.productGrid}>
-          {t.productReferences.products.map((product, index) => (
+          {products.map((product, index) => {
+            const imageSrc = productImageMap[product.title] || product.imageUrl;
+            const hasError = imageErrors[product.title];
+            
+            return (
             <div key={index} className={styles.productCard}>
               <div className={styles.productImageWrapper}>
-                <img 
-                  src={productImageMap[product.title] || product.imageUrl} 
-                  alt={product.title}
-                  className={styles.productImage}
-                />
+                {!hasError && imageSrc ? (
+                  <img 
+                    src={imageSrc} 
+                    alt={product.title}
+                    className={styles.productImage}
+                    onError={() => handleImageError(product.title)}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className={styles.productImagePlaceholder}>
+                    <span>No Image</span>
+                  </div>
+                )}
               </div>
               <div className={styles.productContent}>
                 <h3 className={styles.productTitle}>{product.title}</h3>
@@ -76,7 +111,8 @@ export function ProductReferences() {
                 <p className={styles.productDescription}>{product.description}</p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
