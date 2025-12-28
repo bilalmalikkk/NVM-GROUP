@@ -47,33 +47,22 @@ const productImageMap = {
 export function ProductReferences() {
   const { language } = useLanguage();
   const t = getTranslations(language);
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [ref] = useScrollAnimation({ threshold: 0.1 });
   const [imageErrors, setImageErrors] = React.useState({});
-  const [forceVisible, setForceVisible] = React.useState(false);
-
-  // Fallback: ensure section is visible after a delay if animation doesn't trigger
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isVisible) {
-        setForceVisible(true);
-      }
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [isVisible]);
 
   const handleImageError = (productTitle) => {
     setImageErrors(prev => ({ ...prev, [productTitle]: true }));
   };
 
-  const shouldBeVisible = isVisible || forceVisible;
   const products = t.productReferences?.products || [];
 
   if (!products || products.length === 0) {
     return null;
   }
 
+  // Always apply visible class - section is always visible regardless of scroll animation
   return (
-    <section id="product-references" ref={ref} className={`${styles.productReferencesSection} ${shouldBeVisible ? styles.visible : ''}`}>
+    <section id="product-references" ref={ref} className={`${styles.productReferencesSection} ${styles.visible}`}>
       <div className={styles.productReferencesContainer}>
         <div className={styles.productReferencesHeader}>
           <h2 className={styles.productReferencesTitle}>{t.productReferences?.title || 'Product References'}</h2>
