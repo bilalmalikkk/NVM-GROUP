@@ -124,7 +124,7 @@
 
 @media (max-width: 480px) {
   .ioNodesSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .ioNodesContainer {
@@ -133,6 +133,7 @@
 
   .ioNodesHeading {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .ioNodesSubheading {
@@ -141,6 +142,40 @@
 
   .ioNodesParagraph,
   .ioNodesListItem {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 375px) {
+  .ioNodesSection {
+    padding: 40px 16px;
+  }
+
+  .ioNodesHeading {
+    font-size: 22px;
+  }
+
+  .ioNodesSubheading {
+    font-size: 15px;
+  }
+
+  .ioNodesParagraph,
+  .ioNodesListItem {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ioNodesSection {
+    padding: 35px 12px;
+  }
+
+  .ioNodesHeading {
+    font-size: 20px;
+  }
+
+  .ioNodesSubheading {
     font-size: 14px;
   }
 }

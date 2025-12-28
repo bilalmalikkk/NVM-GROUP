@@ -94,7 +94,7 @@
 
 @media (max-width: 480px) {
   .levelSensorsSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .levelSensorsContainer {
@@ -103,6 +103,7 @@
 
   .levelSensorsHeading {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .levelSensorsSubheading {
@@ -110,6 +111,39 @@
   }
 
   .levelSensorsParagraph {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 375px) {
+  .levelSensorsSection {
+    padding: 40px 16px;
+  }
+
+  .levelSensorsHeading {
+    font-size: 22px;
+  }
+
+  .levelSensorsSubheading {
+    font-size: 15px;
+  }
+
+  .levelSensorsParagraph {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .levelSensorsSection {
+    padding: 35px 12px;
+  }
+
+  .levelSensorsHeading {
+    font-size: 20px;
+  }
+
+  .levelSensorsSubheading {
     font-size: 14px;
   }
 }

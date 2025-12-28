@@ -124,7 +124,7 @@
 
 @media (max-width: 480px) {
   .accessoriesSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .accessoriesContainer {
@@ -133,15 +133,52 @@
 
   .accessoriesHeading {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .accessoriesIntro {
     font-size: 15px;
+    line-height: 1.6;
   }
 
   .accessoriesDescription,
   .accessoriesListItem,
   .accessoriesConclusion {
     font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 375px) {
+  .accessoriesSection {
+    padding: 40px 16px;
+  }
+
+  .accessoriesHeading {
+    font-size: 22px;
+  }
+
+  .accessoriesIntro {
+    font-size: 14px;
+  }
+
+  .accessoriesDescription,
+  .accessoriesListItem,
+  .accessoriesConclusion {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .accessoriesSection {
+    padding: 35px 12px;
+  }
+
+  .accessoriesHeading {
+    font-size: 20px;
+  }
+
+  .accessoriesIntro {
+    font-size: 13px;
   }
 }

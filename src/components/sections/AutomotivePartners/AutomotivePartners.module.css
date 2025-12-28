@@ -134,7 +134,7 @@
 
 @media (max-width: 480px) {
   .partnersSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .partnersContainer {
@@ -152,6 +152,7 @@
 
   .partnersHeading {
     font-size: 20px;
+    line-height: 1.3;
   }
 
   .partnersSubheading {
@@ -160,9 +161,71 @@
 
   .partnersDescription {
     font-size: 14px;
+    line-height: 1.7;
   }
 
   .contactLink {
     font-size: 14px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .partnersSection {
+    padding: 40px 16px;
+  }
+
+  .partnersImage {
+    height: 220px;
+  }
+
+  .partnersCard {
+    margin-top: -35px;
+    padding: 24px 18px;
+  }
+
+  .partnersHeading {
+    font-size: 18px;
+  }
+
+  .partnersSubheading {
+    font-size: 13px;
+  }
+
+  .partnersDescription {
+    font-size: 13px;
+  }
+
+  .contactLink {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .partnersSection {
+    padding: 35px 12px;
+  }
+
+  .partnersImage {
+    height: 200px;
+  }
+
+  .partnersCard {
+    margin-top: -30px;
+    padding: 20px 16px;
+  }
+
+  .partnersHeading {
+    font-size: 17px;
+  }
+
+  .partnersSubheading {
+    font-size: 12px;
+  }
+
+  .partnersDescription {
+    font-size: 12px;
   }
 }

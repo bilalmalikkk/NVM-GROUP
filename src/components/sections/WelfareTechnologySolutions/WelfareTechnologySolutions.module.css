@@ -130,6 +130,7 @@
 @media (max-width: 1024px) {
   .solutionsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 }
 
@@ -141,6 +142,7 @@
   .solutionsTitle {
     font-size: 28px;
     margin-bottom: 40px;
+    letter-spacing: 0.5px;
   }
 
   .solutionsGrid {
@@ -152,12 +154,21 @@
     padding: 24px;
   }
 
+  .solutionTitle {
+    font-size: 18px;
+  }
+
+  .solutionDescription {
+    font-size: 15px;
+  }
+
   .seeMoreContainer {
     margin-top: 40px;
   }
 
   .seeMoreButton {
     font-size: 16px;
+    padding: 10px 0;
   }
 
   .arrowIcon {
@@ -168,21 +179,24 @@
 
 @media (max-width: 480px) {
   .solutionsSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .solutionsTitle {
     font-size: 24px;
     margin-bottom: 32px;
+    letter-spacing: 0.5px;
   }
 
   .solutionsGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .solutionCard {
-    padding: 24px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .solutionIconBox {
@@ -196,16 +210,92 @@
     height: 20px;
   }
 
+  .solutionTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .solutionDescription {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
   .seeMoreContainer {
     margin-top: 32px;
   }
 
   .seeMoreButton {
     font-size: 15px;
+    padding: 10px 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .arrowIcon {
     width: 15px;
     height: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .solutionsSection {
+    padding: 40px 16px;
+  }
+
+  .solutionsTitle {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .solutionsGrid {
+    gap: 18px;
+  }
+
+  .solutionCard {
+    padding: 20px 16px;
+  }
+
+  .solutionIconBox {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+
+  .solutionIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .solutionTitle {
+    font-size: 17px;
+  }
+
+  .solutionDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .solutionsSection {
+    padding: 35px 12px;
+  }
+
+  .solutionsTitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .solutionCard {
+    padding: 18px 14px;
+  }
+
+  .solutionTitle {
+    font-size: 16px;
+  }
+
+  .solutionDescription {
+    font-size: 13px;
   }
 }
