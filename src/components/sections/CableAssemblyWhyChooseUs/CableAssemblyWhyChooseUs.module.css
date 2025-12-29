@@ -126,7 +126,7 @@
 
 @media (max-width: 480px) {
   .whyChooseUsSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .whyChooseUsHeader {
@@ -135,19 +135,23 @@
 
   .whyChooseUsTitle {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .whyChooseUsSubtitle {
     font-size: 15px;
+    line-height: 1.6;
   }
 
   .whyChooseUsGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .whyChooseUsCard {
-    padding: 24px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .whyChooseUsIconBox {
@@ -159,6 +163,77 @@
   .whyChooseUsIcon {
     width: 20px;
     height: 20px;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 18px;
+  }
+
+  .whyChooseUsCardDescription {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .whyChooseUsSection {
+    padding: 40px 16px;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 22px;
+  }
+
+  .whyChooseUsSubtitle {
+    font-size: 14px;
+  }
+
+  .whyChooseUsGrid {
+    gap: 18px;
+  }
+
+  .whyChooseUsCard {
+    padding: 20px 16px;
+  }
+
+  .whyChooseUsIconBox {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .whyChooseUsIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 17px;
+  }
+
+  .whyChooseUsCardDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .whyChooseUsSection {
+    padding: 35px 12px;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 20px;
+  }
+
+  .whyChooseUsCard {
+    padding: 18px 14px;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 16px;
+  }
+
+  .whyChooseUsCardDescription {
+    font-size: 13px;
   }
 }
 

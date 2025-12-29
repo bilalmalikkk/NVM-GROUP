@@ -71,22 +71,73 @@
 
 @media (max-width: 480px) {
   .ctaSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
+  }
+
+  .ctaContainer {
+    max-width: 100%;
   }
 
   .ctaTitle {
     font-size: 28px;
     margin-bottom: 16px;
+    line-height: 1.3;
   }
 
   .ctaDescription {
     font-size: 15px;
     margin-bottom: 24px;
+    line-height: 1.6;
   }
 
   .ctaButton {
     padding: 14px 28px;
     font-size: 15px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 375px) {
+  .ctaSection {
+    padding: 40px 16px;
+  }
+
+  .ctaTitle {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .ctaDescription {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ctaSection {
+    padding: 35px 12px;
+  }
+
+  .ctaTitle {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .ctaDescription {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .ctaButton {
+    padding: 12px 20px;
+    font-size: 14px;
   }
 }
 

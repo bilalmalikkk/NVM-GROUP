@@ -137,7 +137,7 @@
 
 @media (max-width: 480px) {
   .referencesSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .referencesHeader {
@@ -146,15 +146,22 @@
 
   .referencesTitle {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .referencesSubtitle {
     font-size: 15px;
+    line-height: 1.6;
   }
 
   .referencesGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .referenceCard {
+    width: 100%;
+    max-width: 100%;
   }
 
   .cardHeader {
@@ -168,7 +175,82 @@
   }
 
   .cardContent {
-    padding: 24px;
+    padding: 24px 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .referencesSection {
+    padding: 40px 16px;
+  }
+
+  .referencesTitle {
+    font-size: 22px;
+  }
+
+  .referencesSubtitle {
+    font-size: 14px;
+  }
+
+  .referencesGrid {
+    gap: 18px;
+  }
+
+  .cardHeader {
+    padding: 28px 20px;
+    min-height: 110px;
+  }
+
+  .cardIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardContent {
+    padding: 20px 16px;
+  }
+
+  .cardTitle {
+    font-size: 17px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .referencesSection {
+    padding: 35px 12px;
+  }
+
+  .referencesTitle {
+    font-size: 20px;
+  }
+
+  .cardHeader {
+    padding: 24px 16px;
+    min-height: 100px;
+  }
+
+  .cardContent {
+    padding: 18px 14px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 13px;
   }
 }
 

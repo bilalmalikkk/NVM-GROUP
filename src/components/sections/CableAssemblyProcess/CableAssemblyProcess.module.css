@@ -197,7 +197,7 @@
 
 @media (max-width: 480px) {
   .processSection {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
   .processHeader {
@@ -206,10 +206,12 @@
 
   .processTitle {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .processSubtitle {
     font-size: 15px;
+    line-height: 1.6;
   }
 
   .processSteps {
@@ -217,7 +219,7 @@
   }
 
   .stepCard {
-    padding: 24px;
+    padding: 24px 20px;
   }
 
   .stepIconBox {
@@ -234,10 +236,94 @@
   .stepNumberCircle {
     width: 40px;
     height: 40px;
+    top: -20px;
+    left: 16px;
   }
 
   .stepNumber {
     font-size: 18px;
+  }
+
+  .stepTitle {
+    font-size: 18px;
+  }
+
+  .stepDescription {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .processSection {
+    padding: 40px 16px;
+  }
+
+  .processTitle {
+    font-size: 22px;
+  }
+
+  .processSubtitle {
+    font-size: 14px;
+  }
+
+  .processSteps {
+    gap: 28px;
+  }
+
+  .stepCard {
+    padding: 20px 16px;
+  }
+
+  .stepIconBox {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+
+  .stepIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stepNumberCircle {
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    left: 14px;
+  }
+
+  .stepNumber {
+    font-size: 16px;
+  }
+
+  .stepTitle {
+    font-size: 17px;
+  }
+
+  .stepDescription {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .processSection {
+    padding: 35px 12px;
+  }
+
+  .processTitle {
+    font-size: 20px;
+  }
+
+  .stepCard {
+    padding: 18px 14px;
+  }
+
+  .stepTitle {
+    font-size: 16px;
+  }
+
+  .stepDescription {
+    font-size: 13px;
   }
 }
 
