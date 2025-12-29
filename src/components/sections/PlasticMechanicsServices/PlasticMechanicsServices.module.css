@@ -232,12 +232,18 @@
 }
 
 @media (max-width: 480px) {
+  .servicesSection {
+    padding: 50px 20px;
+  }
+
   .servicesTitle {
     font-size: 28px;
+    line-height: 1.3;
   }
 
   .servicesDescription {
     font-size: 15px;
+    line-height: 1.6;
   }
 
   .serviceCard {
@@ -251,6 +257,65 @@
   .serviceTitle {
     font-size: 15px;
     padding: 16px 12px 12px;
+  }
+
+  .carouselButton {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 375px) {
+  .servicesSection {
+    padding: 40px 16px;
+  }
+
+  .servicesTitle {
+    font-size: 24px;
+  }
+
+  .servicesDescription {
+    font-size: 14px;
+  }
+
+  .serviceCard {
+    flex: 0 0 220px;
+  }
+
+  .serviceImageWrapper {
+    height: 160px;
+  }
+
+  .serviceTitle {
+    font-size: 14px;
+    padding: 14px 10px 10px;
+  }
+
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .servicesSection {
+    padding: 35px 12px;
+  }
+
+  .servicesTitle {
+    font-size: 22px;
+  }
+
+  .serviceCard {
+    flex: 0 0 200px;
+  }
+
+  .serviceImageWrapper {
+    height: 150px;
+  }
+
+  .serviceTitle {
+    font-size: 13px;
   }
 }
 
